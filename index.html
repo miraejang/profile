@@ -78,7 +78,14 @@
               <span>React</span>
             </p>
             <ul class="skill_detail">
-              <li>React Hook, React Router을 활용할 수 있습니다</li>
+              <li>State와 Props를 이해하고 있습니다.</li>
+              <li>
+                Class Component와 Function Component를 사용할 수 있습니다.
+              </li>
+              <li>React Hook을 사용할 수 있습니다.</li>
+              <li>React Router, axios을 사용할 수 있습니다.</li>
+              <li>Dependency Injection을 할 수 있습니다.</li>
+              <li>Pure Component와 memo로 Re-Render를 방지할 수 있습니다.</li>
             </ul>
           </div>
           <div class="skill">
@@ -88,6 +95,10 @@
             </p>
             <ul class="skill_detail">
               <li>라이프사이클을 이해하고 사용할 수 있습니다.</li>
+              <li>조건부 렌더링을 할 수 있습니다</li>
+              <li>속성을 바인딩 할 수 있습니다.</li>
+              <li>이벤트를 등록하고 핸들링할 수 있습니다.</li>
+              <li>양방향 데이터 바인딩을 할 수 있습니다.</li>
               <li>Vuex, Vue Router을 활용할 수 있습니다.</li>
             </ul>
           </div>
@@ -97,8 +108,11 @@
               <span>Git</span>
             </p>
             <ul class="skill_detail">
-              <li>라이프사이클을 이해하고 사용할 수 있습니다.</li>
-              <li>Vuex, Vue Router을 활용할 수 있습니다.</li>
+              <li>Repository를 생성하고 local에 저장할 수 있습니다.</li>
+              <li>Repository의 내용을 local에 push, pull할 수 있습니다.</li>
+              <li>branch create, checkout, merge, delete할 수 있습니다.</li>
+              <li>commit한 내용을 reset, revert, cherry-pick할 수 있습니다.</li>
+              <li>stash를 사용할 수 있습니다.</li>
             </ul>
           </div>
         </section>
@@ -141,7 +155,7 @@
                   <p>Firebase를 이용한 로그인 / 로그아웃</p>
                   <p>Firebase를 이용한 실시간 데이터 저장</p>
                   <p>Cloudinary를 이용한 이미지 저장</p>
-                  <p>Router을 이용한 페이지 이동</p>
+                  <p>Router을 이용한 로그인 후 페이지 이동</p>
                   <p>PostCSS를 이용한 변수 설정</p>
                   <p>Dependency Injection 사용</p>
                   <p>memo를 사용한 불필요한 업데이트 방지</p>
@@ -154,30 +168,37 @@
               <img src="./images/youtube.png" alt="유튜브 이미지" />
             </div>
             <div class="disc">
-              <h3 class="project_name">Youtube</h3>
-              <div class="btn_box">
-                <a
-                  class="btn"
-                  href="https://github.com/miraejang/react-youtube"
-                  target="_blank"
-                  >상세 내용 보기</a
-                >
-                <a
-                  class="btn"
-                  href="https://miraejang.github.io/react-youtube/"
-                  target="_blank"
-                  >사이트로 이동하기</a
-                >
-              </div>
-              <div class="tech_stack">
-                <ul>
-                  <li>React</li>
-                  <li>axios</li>
-                  <li>Firebse</li>
-                </ul>
-              </div>
-              <div class="detail">
-                <p>axios를 이용한 API 사용</p>
+              <div class="container">
+                <h3 class="project_name">Youtube</h3>
+                <div class="btn_box">
+                  <a
+                    class="btn"
+                    href="https://github.com/miraejang/react-youtube"
+                    target="_blank"
+                    >상세 내용 보기</a
+                  >
+                  <a
+                    class="btn"
+                    href="https://miraejang.github.io/react-youtube/"
+                    target="_blank"
+                    >사이트로 이동하기</a
+                  >
+                </div>
+                <div class="tech_stack">
+                  <ul>
+                    <li>React</li>
+                    <li>axios</li>
+                    <li>Postman</li>
+                    <li>PostCSS</li>
+                  </ul>
+                </div>
+                <div class="detail">
+                  <p>axios를 이용한 Youtuube API 사용</p>
+                  <p>React Hook 사용</p>
+                  <p>Postman을 이용한 API 관리</p>
+                  <p>PostCSS를 이용한 Component 별 style 적용</p>
+                  <p>Github 자동 배포</p>
+                </div>
               </div>
             </div>
           </div>
@@ -186,29 +207,36 @@
               <img src="./images/movie-app.jpg" alt="영화 소개 앱 이미지" />
             </div>
             <div class="disc">
-              <h3 class="project_name">Movie Web Service</h3>
-              <div class="btn_box">
-                <a
-                  class="btn"
-                  href="https://github.com/miraejang/react-movie-web-ver2"
-                  target="_blank"
-                  >상세 내용 보기</a
-                >
-                <a
-                  class="btn"
-                  href="https://miraejang.github.io/react-movie-web-ver2/#/"
-                  target="_blank"
-                  >사이트로 이동하기</a
-                >
-              </div>
-              <div class="tech_stack">
-                <ul>
-                  <li>React</li>
-                  <li>axios</li>
-                </ul>
-              </div>
-              <div class="detail">
-                <p>axios를 이용한 API 사용</p>
+              <div class="container">
+                <h3 class="project_name">Movie Web Service</h3>
+                <div class="btn_box">
+                  <a
+                    class="btn"
+                    href="https://github.com/miraejang/react-movie-web-ver2"
+                    target="_blank"
+                    >상세 내용 보기</a
+                  >
+                  <a
+                    class="btn"
+                    href="https://miraejang.github.io/react-movie-web-ver2/#/"
+                    target="_blank"
+                    >사이트로 이동하기</a
+                  >
+                </div>
+                <div class="tech_stack">
+                  <ul>
+                    <li>React</li>
+                    <li>React Router</li>
+                    <li>axios</li>
+                    <li>Styled Components</li>
+                  </ul>
+                </div>
+                <div class="detail">
+                  <p>axios를 이용한 API 사용</p>
+                  <p>Styled Components를 이용한 style 적용</p>
+                  <p>Router을 이용한 영화 상세정보 페이지 이동</p>
+                  <p>체크된 조건 별 영화 리스트 렌더링</p>
+                </div>
               </div>
             </div>
           </div>
@@ -217,31 +245,38 @@
               <img src="./images/vue-twitter.jpg" alt="트위터 이미지" />
             </div>
             <div class="disc">
-              <h3 class="project_name">Twitter</h3>
-              <div class="btn_box">
-                <a
-                  class="btn"
-                  href="https://github.com/miraejang/vue-twitter"
-                  target="_blank"
-                  >상세 내용 보기</a
-                >
-                <a
-                  class="btn"
-                  href="https://miraejang.github.io/vue-twitter/"
-                  target="_blank"
-                  >사이트로 이동하기</a
-                >
-              </div>
-              <div class="tech_stack">
-                <ul>
-                  <li>Vue3</li>
-                  <li>Tailwind CSS</li>
-                  <li>Firebase</li>
-                </ul>
-              </div>
-              <div class="detail">
-                <p>Firebase를 이용한 로그인 / 로그아웃 기능</p>
-                <p>Firebase를 이용한 데이터 저장</p>
+              <div class="container">
+                <h3 class="project_name">Twitter</h3>
+                <div class="btn_box">
+                  <a
+                    class="btn"
+                    href="https://github.com/miraejang/vue-twitter"
+                    target="_blank"
+                    >상세 내용 보기</a
+                  >
+                  <a
+                    class="btn"
+                    href="https://miraejang.github.io/vue-twitter/"
+                    target="_blank"
+                    >사이트로 이동하기</a
+                  >
+                </div>
+                <div class="tech_stack">
+                  <ul>
+                    <li>Vue3</li>
+                    <li>Vuex</li>
+                    <li>Vue Router</li>
+                    <li>Tailwind CSS</li>
+                    <li>Firebase</li>
+                  </ul>
+                </div>
+                <div class="detail">
+                  <p>Vuex를 이용한 상태관리와 화면 업데이트</p>
+                  <p>Firebase를 이용한 로그인 / 로그아웃 기능</p>
+                  <p>Firebase를 이용한 데이터 저장</p>
+                  <p>Tailwind CSS를 이용한 styles 적용</p>
+                  <p>Github 자동 배포</p>
+                </div>
               </div>
             </div>
           </div>
@@ -250,28 +285,37 @@
               <img src="./images/vue-game.jpg" alt="미니 게임 앱 이미지" />
             </div>
             <div class="disc">
-              <h3 class="project_name">Mini Games</h3>
-              <div class="btn_box">
-                <a
-                  class="btn"
-                  href="https://github.com/miraejang/vue-web-games"
-                  target="_blank"
-                  >상세 내용 보기</a
-                >
-                <a
-                  class="btn"
-                  href="https://miraejang.github.io/vue-web-games/"
-                  target="_blank"
-                  >사이트로 이동하기</a
-                >
-              </div>
-              <div class="tech_stack">
-                <ul>
-                  <li>Vue.js</li>
-                </ul>
-              </div>
-              <div class="detail">
-                <p>axios를 이용한 API 사용</p>
+              <div class="container">
+                <h3 class="project_name">Mini Games</h3>
+                <div class="btn_box">
+                  <a
+                    class="btn"
+                    href="https://github.com/miraejang/vue-web-games"
+                    target="_blank"
+                    >상세 내용 보기</a
+                  >
+                  <a
+                    class="btn"
+                    href="https://miraejang.github.io/vue-web-games/"
+                    target="_blank"
+                    >사이트로 이동하기</a
+                  >
+                </div>
+                <div class="tech_stack">
+                  <ul>
+                    <li>Vue.js</li>
+                    <li>Vuex</li>
+                    <li>Vue Router</li>
+                  </ul>
+                </div>
+                <div class="detail">
+                  <p>조건문과 반복문</p>
+                  <p>Props 전달</p>
+                  <p>변화 감지 및 선택적 렌더링</p>
+                  <p>class와 style 속성 바인딩</p>
+                  <p>Form(input, textarea, select) 바인딩</p>
+                  <p>Router를 이용한 페이지 이동</p>
+                </div>
               </div>
             </div>
           </div>
@@ -281,10 +325,13 @@
           <div class="experience">
             <div class="company_info">
               <h3 class="company_name">예스콜닷컴</h3>
-              <p class="period">
-                2019.02.25<br />
-                ~ 2021.10.29
-              </p>
+              <div class="period">
+                <p>
+                  2019.02.25<br />
+                  ~ 2021.10.29
+                </p>
+                <p>(2년 9개월)</p>
+              </div>
             </div>
             <div class="work_info">
               <ul class="tech_stack">
@@ -325,10 +372,13 @@
           <div class="experience">
             <div class="company_info">
               <h3 class="company_name">메이크엠</h3>
-              <p class="period">
-                2016.03.17<br />
-                ~ 2018.03.31
-              </p>
+              <div class="period">
+                <p>
+                  2016.03.17<br />
+                  ~ 2018.03.31
+                </p>
+                <p>(2년 9개월)</p>
+              </div>
             </div>
             <div class="work_info">
               <ul class="tech_stack">

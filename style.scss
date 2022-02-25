@@ -7,6 +7,7 @@
 }
 
 $font: 'SeoulNamsanM';
+$mobile-size: 48rem;
 $veri-peri: #6667ab;
 $light-veri-peri: #acaedf;
 $dark-grey: #333;
@@ -24,6 +25,7 @@ $ligth-grey: #999;
   font-family: $font;
   color: $dark-grey;
   border-bottom: 10px solid $veri-peri;
+  word-break: keep-all;
 
   h3 {
     font-size: 1.5rem;
@@ -201,8 +203,8 @@ $ligth-grey: #999;
   }
 
   & + .project {
-    margin-top: 5em;
-    padding-top: 2em;
+    margin-top: 3em;
+    padding-top: 3em;
     border-top: 1px solid #e1e1e1;
   }
 
@@ -232,14 +234,14 @@ $ligth-grey: #999;
   }
 
   .tech_stack {
-    margin-top: 3em;
+    margin-top: 2.2em;
   }
 
   .detail {
     margin-top: 0.5em;
 
     p {
-      line-height: 1.8;
+      margin-top: 0.8em;
       font-size: 1.2rem;
 
       &::before {
@@ -318,6 +320,34 @@ $ligth-grey: #999;
         margin-right: 0.2em;
         background-color: #999;
         vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-size) {
+  .project {
+    flex-direction: column;
+
+    &:nth-child(even) {
+      flex-direction: column;
+    }
+
+    .img {
+      padding-bottom: 2em;
+    }
+
+    .disc {
+      text-align: center;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .detail {
+          text-align: left;
+        }
       }
     }
   }

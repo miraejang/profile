@@ -26,6 +26,7 @@
   font-family: "SeoulNamsanM";
   color: #333;
   border-bottom: 10px solid #6667ab;
+  word-break: keep-all;
 }
 
 .profile h3 {
@@ -206,8 +207,8 @@
 }
 
 .project + .project {
-  margin-top: 5em;
-  padding-top: 2em;
+  margin-top: 3em;
+  padding-top: 3em;
   border-top: 1px solid #e1e1e1;
 }
 
@@ -237,7 +238,7 @@
 }
 
 .project .tech_stack {
-  margin-top: 3em;
+  margin-top: 2.2em;
 }
 
 .project .detail {
@@ -245,7 +246,7 @@
 }
 
 .project .detail p {
-  line-height: 1.8;
+  margin-top: 0.8em;
   font-size: 1.2rem;
 }
 
@@ -323,5 +324,41 @@
   margin-right: 0.2em;
   background-color: #999;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 48rem) {
+  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project .img {
+    padding-bottom: 2em;
+  }
+  .project .disc {
+    text-align: center;
+  }
+  .project .disc .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project .disc .container .detail {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
