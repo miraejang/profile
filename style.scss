@@ -211,17 +211,15 @@ $ligth-grey: #999;
     padding: 0 2em;
   }
 
+  img {
+    max-width: 300px;
+    padding: 0.2em;
+    border: 2px solid $veri-peri;
+  }
+
   .project_name {
     font-size: 1.5rem;
     letter-spacing: 0.03em;
-  }
-
-  .project_intro {
-    margin-bottom: 1.5em;
-  }
-
-  .tech_stack {
-    margin-top: 3em;
   }
 
   .project_intro {
@@ -229,13 +227,15 @@ $ligth-grey: #999;
     color: $grey;
   }
 
-  img {
-    max-width: 300px;
-    padding: 0.2em;
-    border: 2px solid $veri-peri;
+  .btn_box {
+    margin-top: 1.2em;
   }
 
-  .learned {
+  .tech_stack {
+    margin-top: 3em;
+  }
+
+  .detail {
     margin-top: 0.5em;
 
     p {

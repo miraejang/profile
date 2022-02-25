@@ -216,17 +216,15 @@
   padding: 0 2em;
 }
 
+.project img {
+  max-width: 300px;
+  padding: 0.2em;
+  border: 2px solid #6667ab;
+}
+
 .project .project_name {
   font-size: 1.5rem;
   letter-spacing: 0.03em;
-}
-
-.project .project_intro {
-  margin-bottom: 1.5em;
-}
-
-.project .tech_stack {
-  margin-top: 3em;
 }
 
 .project .project_intro {
@@ -234,22 +232,24 @@
   color: #666;
 }
 
-.project img {
-  max-width: 300px;
-  padding: 0.2em;
-  border: 2px solid #6667ab;
+.project .btn_box {
+  margin-top: 1.2em;
 }
 
-.project .learned {
+.project .tech_stack {
+  margin-top: 3em;
+}
+
+.project .detail {
   margin-top: 0.5em;
 }
 
-.project .learned p {
+.project .detail p {
   line-height: 1.8;
   font-size: 1.2rem;
 }
 
-.project .learned p::before {
+.project .detail p::before {
   content: '✔';
   margin: 0 1em;
   color: #6667ab;
