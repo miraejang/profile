@@ -102,6 +102,7 @@
 
 .profile .tech_stack li {
   display: inline-block;
+  margin-bottom: 1em;
   padding: 0.2em 1em;
   border-radius: 0.5em;
   font-size: 1rem;
@@ -153,29 +154,40 @@
   margin-left: 0.2em;
 }
 
-.skills > li + li {
+.skills .preview {
+  margin-bottom: 2em;
+}
+
+.skills .preview .learned {
+  display: none;
+}
+
+.skills .preview .learned li {
+  background-color: #acaedf;
+}
+
+.skills .skill + .skill {
   margin-top: 3em;
 }
 
-.skills .skill {
+.skills .skill .skill_name {
   display: inline-block;
   font-weight: 900;
   font-size: 1.3rem;
-  color: #6667ab;
   letter-spacing: 0.08em;
 }
 
-.skills .disc {
+.skills .skill .skill_detail {
   margin: 1em;
 }
 
-.skills .disc li {
+.skills .skill .skill_detail li {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #444;
 }
 
-.skills .disc li::before {
+.skills .skill .skill_detail li::before {
   content: '';
   display: inline-block;
   width: 4px;
@@ -240,7 +252,7 @@
 }
 
 .project .learned {
-  margin: 1em 0;
+  margin-top: 0.5em;
 }
 
 .project .learned p {
@@ -257,21 +269,21 @@
   font-size: 0.8em;
 }
 
-.work {
+.work_experience .experience {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.work + .work {
+.work_experience .experience + .experience {
   margin-top: 2em;
 }
 
-.work .company {
+.work_experience .experience .company_info {
   margin-right: 3em;
 }
 
-.work .period {
+.work_experience .experience .company_info .period {
   margin-top: 1.5em;
   line-height: 1.6;
   font-size: 1.1rem;
@@ -279,42 +291,42 @@
   letter-spacing: 0.05em;
 }
 
-.work .experience h4 {
+.work_experience .experience .work_detail h4 {
   margin: 1em 0.4em;
   font-weight: 400;
   color: #666;
   letter-spacing: 0.06em;
 }
 
-.work .experience p {
+.work_experience .experience .work_detail p {
   line-height: 1.7;
   font-size: 1em;
   color: #666;
 }
 
-.work .experience ul {
+.work_experience .experience .work_detail ul {
   padding: 0 1em;
 }
 
-.work .experience ul li {
+.work_experience .experience .work_detail ul li {
   line-height: 1.6;
 }
 
-.work .experience ul ul {
+.work_experience .experience .work_detail ul ul {
   margin: 0.5em 0;
 }
 
-.work .experience ul ul li {
+.work_experience .experience .work_detail ul ul li {
   line-height: 1.6;
 }
 
-.work .experience ul ul li::before {
+.work_experience .experience .work_detail ul ul li::before {
   content: '-';
   margin-right: 0.5em;
   color: #999;
 }
 
-.work .experience > ul > li::before {
+.work_experience .experience .work_detail > ul > li::before {
   content: '';
   display: inline-block;
   width: 4px;

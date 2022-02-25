@@ -15,7 +15,7 @@
         <p>프론트엔드 개발자 장미래입니다.</p>
       </div>
       <div class="wrap">
-        <div class="personal_info">
+        <section class="personal_info">
           <h1 class="name"><span>장미래</span></h1>
           <p class="intro">
             안녕하세요😊 <br />가장 효율적인 해결책을 고민하는 프론트엔드 개발자
@@ -38,18 +38,32 @@
               </a>
             </div>
           </div>
-        </div>
-        <h2 class="title"><span>기술</span></h2>
-        <ul class="skills">
-          <li>
-            <p class="skill">
+        </section>
+        <section class="skills">
+          <h2 class="title"><span>기술</span></h2>
+          <div class="preview">
+            <ul class="tech_stack">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Git</li>
+            </ul>
+            <ul class="tech_stack learned">
+              <li>TypeScript</li>
+              <li>node.js</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <p class="skill_name">
               <i class="fa-brands fa-html5 fa-lg" style="color: #dd4b25"></i>
               <span>HTML</span>
               <span> / </span>
               <i class="fa-brands fa-css3-alt fa-lg" style="color: #006bc0"></i>
               <span>CSS</span>
             </p>
-            <ul class="disc">
+            <ul class="skill_detail">
               <li>시맨틱 마크업을 준수합니다.</li>
               <li>웹접근성을 고려하여 작성합니다.</li>
               <li>크로스브라우징을 할 수 있습니다.</li>
@@ -58,234 +72,241 @@
                 flex, grid등 최근 업데이트 된 내용들도 사용할 수 있습니다.
               </li>
             </ul>
-          </li>
-          <li>
-            <p class="skill">
+          </div>
+          <div class="skill">
+            <p class="skill_name">
               <i class="fa-brands fa-js fa-lg" style="color: #efd81d"></i>
               <span>JavaScript</span>
             </p>
-            <ul class="disc">
+            <ul class="skill_detail">
               <li>ES6 이상을 문법을 사용할 수 있습니다.</li>
               <li>데이터의 타입을 알고, 호이스팅에 대해 이해하고있습니다.</li>
               <li>배열과 객체를 활용할 수 있습니다.</li>
               <li>Class 문법을 사용할 수 있습니다.</li>
               <li>동기와 비동기를 이해하고 사용할 수 있습니다.</li>
             </ul>
-          </li>
-          <li>
-            <p class="skill">
+          </div>
+          <div class="skill">
+            <p class="skill_name">
               <i class="fa-brands fa-react fa-lg" style="color: #61dafb"></i>
               <span>React</span>
             </p>
-            <ul class="disc">
+            <ul class="skill_detail">
               <li>React Hook, React Router을 활용할 수 있습니다</li>
             </ul>
-          </li>
-          <li>
-            <p class="skill">
+          </div>
+          <div class="skill">
+            <p class="skill_name">
               <i class="fa-brands fa-vuejs fa-lg" style="color: #3fb27f"></i>
               <span>Vue.js</span>
             </p>
-            <ul class="disc">
+            <ul class="skill_detail">
               <li>라이프사이클을 이해하고 사용할 수 있습니다.</li>
               <li>Vuex, Vue Router을 활용할 수 있습니다.</li>
             </ul>
-          </li>
-          <li>
-            <p class="skill">
+          </div>
+          <div class="skill">
+            <p class="skill_name">
               <i class="fa-brands fa-git-alt fa-lg" style="color: #e84d31"></i>
               <span>Git</span>
             </p>
-          </li>
-        </ul>
-
-        <h2 class="title"><span>프로젝트</span></h2>
-        <div class="project">
-          <div class="img">
-            <img src="./images/order_app.png" alt="주문 관리 앱 이미지" />
+            <ul class="skill_detail">
+              <li>라이프사이클을 이해하고 사용할 수 있습니다.</li>
+              <li>Vuex, Vue Router을 활용할 수 있습니다.</li>
+            </ul>
           </div>
-          <div class="disc">
-            <div class="container">
-              <h3 class="project_name">Order Management APP</h3>
-              <p class="project_intro">
-                주문을 카드형식으로 등록하여 관리할 수 있는 앱입니다.
-              </p>
-              <a
-                class="btn"
-                href="https://github.com/miraejang/react-order-management-app"
-                target="_blank"
-                >상세 내용 보기</a
-              >
-              <a
-                class="btn"
-                href="https://miraejang.github.io/react-order-management-app/"
-                target="_blank"
-                >사이트로 이동하기</a
-              >
+        </section>
+        <section class="projects">
+          <h2 class="title"><span>프로젝트</span></h2>
+          <div class="project">
+            <div class="img">
+              <img src="./images/order_app.png" alt="주문 관리 앱 이미지" />
+            </div>
+            <div class="disc">
+              <div class="container">
+                <h3 class="project_name">Order Management APP</h3>
+                <p class="project_intro">
+                  주문을 카드형식으로 등록하여 관리할 수 있는 앱입니다.
+                </p>
+                <a
+                  class="btn"
+                  href="https://github.com/miraejang/react-order-management-app"
+                  target="_blank"
+                  >상세 내용 보기</a
+                >
+                <a
+                  class="btn"
+                  href="https://miraejang.github.io/react-order-management-app/"
+                  target="_blank"
+                  >사이트로 이동하기</a
+                >
+                <div class="tech_stack">
+                  <ul>
+                    <li>React</li>
+                    <li>React Router</li>
+                    <li>Firebse</li>
+                    <li>Cloudinary</li>
+                    <li>PostCSS</li>
+                  </ul>
+                </div>
+                <div class="learned">
+                  <p>Firebase를 이용한 로그인 / 로그아웃</p>
+                  <p>Firebase를 이용한 실시간 데이터 저장</p>
+                  <p>Cloudinary를 이용한 이미지 저장</p>
+                  <p>Router을 이용한 페이지 이동</p>
+                  <p>PostCSS를 이용한 변수 설정</p>
+                  <p>Dependency Injection 사용</p>
+                  <p>memo를 사용한 불필요한 업데이트 방지</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="img">
+              <img src="./images/youtube.png" alt="유튜브 이미지" />
+            </div>
+            <div class="disc">
+              <h3 class="project_name">Youtube</h3>
               <div class="tech_stack">
                 <ul>
                   <li>React</li>
-                  <li>React Router</li>
+                  <li>axios</li>
                   <li>Firebse</li>
-                  <li>Cloudinary</li>
-                  <li>PostCSS</li>
                 </ul>
               </div>
               <div class="learned">
-                <p>Firebase를 이용한 로그인 / 로그아웃</p>
-                <p>Firebase를 이용한 실시간 데이터 저장</p>
-                <p>Cloudinary를 이용한 이미지 저장</p>
-                <p>Router을 이용한 페이지 이동</p>
-                <p>PostCSS를 이용한 변수 설정</p>
-                <p>Dependency Injection 사용</p>
-                <p>memo를 사용한 불필요한 업데이트 방지</p>
+                <p>axios를 이용한 API 사용</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="project">
-          <div class="img">
-            <img src="./images/youtube.png" alt="유튜브 이미지" />
-          </div>
-          <div class="disc">
-            <h3 class="project_name">Youtube</h3>
-            <div class="tech_stack">
-              <ul>
-                <li>React</li>
-                <li>axios</li>
-                <li>Firebse</li>
-              </ul>
+          <div class="project">
+            <div class="img">
+              <img src="./images/movie-app.jpg" alt="영화 소개 앱 이미지" />
             </div>
-            <div class="learned">
-              <p>axios를 이용한 API 사용</p>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <div class="img">
-            <img src="./images/movie-app.jpg" alt="영화 소개 앱 이미지" />
-          </div>
-          <div class="disc">
-            <h3 class="project_name">Movie Web Service</h3>
-            <div class="tech_stack">
-              <ul>
-                <li>React</li>
-                <li>axios</li>
-              </ul>
-            </div>
-            <div class="learned">
-              <p>axios를 이용한 API 사용</p>
+            <div class="disc">
+              <h3 class="project_name">Movie Web Service</h3>
+              <div class="tech_stack">
+                <ul>
+                  <li>React</li>
+                  <li>axios</li>
+                </ul>
+              </div>
+              <div class="learned">
+                <p>axios를 이용한 API 사용</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="project">
-          <div class="img">
-            <img src="./images/vue-twitter.jpg" alt="트위터 이미지" />
-          </div>
-          <div class="disc">
-            <h3 class="project_name">Twitter</h3>
-            <div class="tech_stack">
-              <ul>
-                <li>Vue3</li>
-                <li>Tailwind CSS</li>
-                <li>Firebase</li>
-              </ul>
+          <div class="project">
+            <div class="img">
+              <img src="./images/vue-twitter.jpg" alt="트위터 이미지" />
             </div>
-            <div class="learned">
-              <p>Firebase를 이용한 로그인 / 로그아웃 기능</p>
-              <p>Firebase를 이용한 데이터 저장</p>
+            <div class="disc">
+              <h3 class="project_name">Twitter</h3>
+              <div class="tech_stack">
+                <ul>
+                  <li>Vue3</li>
+                  <li>Tailwind CSS</li>
+                  <li>Firebase</li>
+                </ul>
+              </div>
+              <div class="learned">
+                <p>Firebase를 이용한 로그인 / 로그아웃 기능</p>
+                <p>Firebase를 이용한 데이터 저장</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="project">
-          <div class="img">
-            <img src="./images/vue-game.jpg" alt="미니 게임 앱 이미지" />
+          <div class="project">
+            <div class="img">
+              <img src="./images/vue-game.jpg" alt="미니 게임 앱 이미지" />
+            </div>
+            <div class="disc">
+              <h3 class="project_name">Mini Games</h3>
+              <div class="tech_stack">
+                <ul>
+                  <li>Vue.js</li>
+                </ul>
+              </div>
+              <div class="learned">
+                <p>axios를 이용한 API 사용</p>
+              </div>
+            </div>
           </div>
-          <div class="disc">
-            <h3 class="project_name">Mini Games</h3>
-            <div class="tech_stack">
-              <ul>
+        </section>
+        <section class="work_experience">
+          <h2 class="title"><span>경력</span></h2>
+          <div class="experience">
+            <div class="company_info">
+              <h3 class="company_name">예스콜닷컴</h3>
+              <p class="period">
+                2019.02.25<br />
+                ~ 2021.10.29
+              </p>
+            </div>
+            <div class="work_info">
+              <ul class="tech_stack">
+                <li>HTML/CSS</li>
+                <li>SCSS</li>
+                <li>jQuery</li>
+                <li>JavaScript</li>
                 <li>Vue.js</li>
+                <li>Gitlab</li>
+                <li>Slack</li>
               </ul>
-            </div>
-            <div class="learned">
-              <p>axios를 이용한 API 사용</p>
+              <div class="work_detail">
+                <h4>퍼블리셔</h4>
+                <ul>
+                  <li>
+                    <span>업체 사이트 제작</span>
+                    <ul>
+                      <li>90여건의 업체 사이트 제작</li>
+                      <li>업체 사이트 유지 & 보수</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>자사 솔루션 개발 참여</span>
+                    <ul>
+                      <li>자사 솔루션 기능 개발 시 UI 작업</li>
+                      <li>Form 페이지를 JavaScript로 유효성 검사 작업</li>
+                      <li>자사 솔루션에 새로운 디자인 템플릿 제작</li>
+                      <li>
+                        기존 기능을 다른 UI로 편하게 사용하도록 JavaScript를
+                        사용한 캡슐화 작업
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <h2 class="title"><span>경력</span></h2>
-        <div class="work">
-          <div class="company">
-            <h3 class="company_name">예스콜닷컴</h3>
-            <p class="period">
-              2019.02.25<br />
-              ~ 2021.10.29
-            </p>
-          </div>
-          <div class="works_detail">
-            <ul class="tech_stack">
-              <li>HTML/CSS</li>
-              <li>SCSS</li>
-              <li>jQuery</li>
-              <li>JavaScript</li>
-              <li>Vue.js</li>
-              <li>Gitlab</li>
-              <li>Slack</li>
-            </ul>
-            <div class="experience">
-              <h4>퍼블리셔</h4>
-              <ul>
-                <li>
-                  <span>업체 사이트 제작</span>
-                  <ul>
-                    <li>90여건의 업체 사이트 제작</li>
-                    <li>업체 사이트 유지 & 보수</li>
-                  </ul>
-                </li>
-                <li>
-                  <span>자사 솔루션 개발 참여</span>
-                  <ul>
-                    <li>자사 솔루션 기능 개발 시 UI 작업</li>
-                    <li>Form 페이지를 JavaScript로 유효성 검사 작업</li>
-                    <li>자사 솔루션에 새로운 디자인 템플릿 제작</li>
-                    <li>
-                      기존 기능을 다른 UI로 편하게 사용하도록 JavaScript를
-                      사용한 캡슐화 작업
-                    </li>
-                  </ul>
-                </li>
+          <div class="experience">
+            <div class="company_info">
+              <h3 class="company_name">메이크엠</h3>
+              <p class="period">
+                2016.03.17<br />
+                ~ 2018.03.31
+              </p>
+            </div>
+            <div class="work_info">
+              <ul class="tech_stack">
+                <li>Photoshop</li>
+                <li>Cafe24</li>
               </ul>
+              <div class="work_detail">
+                <h4>웹디자이너</h4>
+                <ul>
+                  <li>
+                    <span>상품 상세페이지 제작</span>
+                    <ul>
+                      <li>의류 쇼핑몰 제품 상세페이지 촬영 및 제작</li>
+                      <li>광고 배너 제작</li>
+                      <li>카페 24 상품 등록 & 11번가 상품 연동</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="work">
-          <div class="company">
-            <h3 class="company_name">메이크엠</h3>
-            <p class="period">
-              2016.03.17<br />
-              ~ 2018.03.31
-            </p>
-          </div>
-          <div class="works_detail">
-            <ul class="tech_stack">
-              <li>Photoshop</li>
-              <li>Cafe24</li>
-            </ul>
-            <div class="experience">
-              <h4>웹디자이너</h4>
-              <ul>
-                <li>
-                  <span>상품 상세페이지 제작</span>
-                  <ul>
-                    <li>의류 쇼핑몰 제품 상세페이지 촬영 및 제작</li>
-                    <li>광고 배너 제작</li>
-                    <li>카페 24 상품 등록 & 11번가 상품 연동</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   </body>

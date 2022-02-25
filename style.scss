@@ -8,6 +8,7 @@
 
 $font: 'SeoulNamsanM';
 $veri-peri: #6667ab;
+$light-veri-peri: #acaedf;
 $dark-grey: #333;
 $grey: #666;
 $ligth-grey: #999;
@@ -100,6 +101,7 @@ $ligth-grey: #999;
 
   .tech_stack li {
     display: inline-block;
+    margin-bottom: 1em;
     padding: 0.2em 1em;
     border-radius: 0.5em;
     font-size: 1rem;
@@ -154,34 +156,47 @@ $ligth-grey: #999;
 }
 
 .skills {
-  & > li + li {
-    margin-top: 3em;
+  .preview {
+    margin-bottom: 2em;
+
+    .learned {
+      display: none;
+
+      li {
+        background-color: $light-veri-peri;
+      }
+    }
   }
 
   .skill {
-    display: inline-block;
-    font-weight: 900;
-    font-size: 1.3rem;
-    color: $veri-peri;
-    letter-spacing: 0.08em;
-  }
+    & + .skill {
+      margin-top: 3em;
+    }
 
-  .disc {
-    margin: 1em;
+    .skill_name {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+    }
 
-    li {
-      line-height: 1.8;
-      font-size: 1.1rem;
-      color: #444;
+    .skill_detail {
+      margin: 1em;
 
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        margin-right: 0.8em;
-        background-color: #999;
-        vertical-align: middle;
+      li {
+        line-height: 1.8;
+        font-size: 1.1rem;
+        color: #444;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          margin-right: 0.8em;
+          background-color: #999;
+          vertical-align: middle;
+        }
       }
     }
   }
@@ -232,7 +247,7 @@ $ligth-grey: #999;
   }
 
   .learned {
-    margin: 1em 0;
+    margin-top: 0.5em;
 
     p {
       line-height: 1.8;
@@ -250,68 +265,71 @@ $ligth-grey: #999;
   }
 }
 
-.work {
-  display: flex;
-
-  & + .work {
-    margin-top: 2em;
-  }
-
-  .company {
-    margin-right: 3em;
-  }
-
-  .period {
-    margin-top: 1.5em;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: #999;
-    letter-spacing: 0.05em;
-  }
+.work_experience {
   .experience {
-    h4 {
-      margin: 1em 0.4em;
-      font-weight: 400;
-      color: $grey;
-      letter-spacing: 0.06em;
+    display: flex;
+
+    & + .experience {
+      margin-top: 2em;
     }
 
-    p {
-      line-height: 1.7;
-      font-size: 1em;
-      color: $grey;
-    }
+    .company_info {
+      margin-right: 3em;
 
-    ul {
-      padding: 0 1em;
-
-      li {
+      .period {
+        margin-top: 1.5em;
         line-height: 1.6;
+        font-size: 1.1rem;
+        color: #999;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    .work_detail {
+      h4 {
+        margin: 1em 0.4em;
+        font-weight: 400;
+        color: $grey;
+        letter-spacing: 0.06em;
+      }
+
+      p {
+        line-height: 1.7;
+        font-size: 1em;
+        color: $grey;
       }
 
       ul {
-        margin: 0.5em 0;
+        padding: 0 1em;
 
         li {
           line-height: 1.6;
+        }
 
-          &::before {
-            content: '-';
-            margin-right: 0.5em;
-            color: #999;
+        ul {
+          margin: 0.5em 0;
+
+          li {
+            line-height: 1.6;
+
+            &::before {
+              content: '-';
+              margin-right: 0.5em;
+              color: #999;
+            }
           }
         }
       }
-    }
 
-    & > ul > li::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      margin-right: 0.2em;
-      background-color: #999;
-      vertical-align: middle;
+      & > ul > li::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-right: 0.2em;
+        background-color: #999;
+        vertical-align: middle;
+      }
     }
   }
 }
