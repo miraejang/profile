@@ -139,9 +139,19 @@
   font-style: normal;
 }
 
+.personal_info .info .email {
+  padding: 0 0.5em;
+}
+
 .personal_info .info .btn {
   font-weight: 600;
   font-size: 1rem;
+  vertical-align: middle;
+}
+
+.personal_info .info .btn .icon {
+  font-size: 1.5rem;
+  margin-left: 0.2em;
 }
 
 .skills > li + li {
