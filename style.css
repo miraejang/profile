@@ -154,18 +154,6 @@
   margin-left: 0.2em;
 }
 
-.skills .preview {
-  margin-bottom: 2em;
-}
-
-.skills .preview .learned {
-  display: none;
-}
-
-.skills .preview .learned li {
-  background-color: #acaedf;
-}
-
 .skills .skill + .skill {
   margin-top: 3em;
 }
@@ -174,6 +162,7 @@
   display: inline-block;
   font-weight: 900;
   font-size: 1.3rem;
+  color: #6667ab;
   letter-spacing: 0.08em;
 }
 

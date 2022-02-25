@@ -156,18 +156,6 @@ $ligth-grey: #999;
 }
 
 .skills {
-  .preview {
-    margin-bottom: 2em;
-
-    .learned {
-      display: none;
-
-      li {
-        background-color: $light-veri-peri;
-      }
-    }
-  }
-
   .skill {
     & + .skill {
       margin-top: 3em;
@@ -177,6 +165,7 @@ $ligth-grey: #999;
       display: inline-block;
       font-weight: 900;
       font-size: 1.3rem;
+      color: $veri-peri;
       letter-spacing: 0.08em;
     }
 
