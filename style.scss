@@ -40,6 +40,7 @@ $ligth-grey: #999;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
     width: 100%;
     padding: 1em;
     text-align: center;
@@ -139,6 +140,20 @@ $ligth-grey: #999;
     .btn {
       font-weight: 600;
       font-size: 1rem;
+
+      // .icon {
+      //   display: inline-block;
+      //   &.blog {
+      //     width: 20px;
+      //     height: 20px;
+      //     border-radius: 50%;
+      //     background-color: #eb531f;
+      //     text-align: center;
+      //     font-weight: bold;
+      //     color: #fff;
+      //     vertical-align: middle;
+      //   }
+      // }
     }
   }
 }
