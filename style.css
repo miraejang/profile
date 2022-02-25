@@ -1,33 +1,4 @@
 @charset "UTF-8";
-body,
-div,
-p,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-i,
-em {
-  font-weight: normal;
-  font-style: normal;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 @font-face {
   font-family: 'SeoulNamsanM';
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff") format("woff");
@@ -35,12 +6,14 @@ a {
   font-style: normal;
 }
 
-h3 {
-  font-size: 1.5rem;
+::-moz-selection {
+  background-color: #6667ab;
+  color: #fff;
 }
 
-h4 {
-  font-size: 1.3rem;
+::selection {
+  background-color: #6667ab;
+  color: #fff;
 }
 
 .profile {
@@ -50,15 +23,24 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'SeoulNamsanM';
+  font-family: "SeoulNamsanM";
   color: #333;
+  border-bottom: 10px solid #6667ab;
 }
 
-.wrap {
+.profile h3 {
+  font-size: 1.5rem;
+}
+
+.profile h4 {
+  font-size: 1.3rem;
+}
+
+.profile .wrap {
   margin: 10rem 2rem 3rem;
 }
 
-.top {
+.profile .top {
   position: fixed;
   top: 0;
   left: 0;
@@ -71,47 +53,94 @@ h4 {
   letter-spacing: 0.08em;
 }
 
-.top p {
+.profile .top p {
   color: #fff;
-  opacity: 0.8;
 }
 
-.name {
+.profile .title {
+  margin: 8rem 0 4rem;
+  font-size: 2.2rem;
+}
+
+.profile .title span {
+  padding: 0 1em 0.3em 0.2em;
+  padding-bottom: 0.3em;
+  border-bottom: 3px solid #6667ab;
+}
+
+.profile .btn {
+  display: inline-block;
+  position: relative;
+  margin-right: 1em;
+  padding: 0.5em;
+  background-color: #f5f5f5;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.profile .btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6667ab;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.profile .btn:hover {
+  background-color: #fff;
+}
+
+.profile .btn:hover::after {
+  width: 100%;
+}
+
+.profile .tech_stack li {
+  display: inline-block;
+  padding: 0.2em 1em;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  color: #444;
+  background-color: #6667ab;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.personal_info .name {
   padding-bottom: 0.3em;
   margin-bottom: 2.5rem;
   border-bottom: 3px solid #6667ab;
   font-size: 4rem;
 }
 
-.intro {
+.personal_info .intro {
   font-size: 1.5rem;
   line-height: 1.7;
 }
 
-.info {
+.personal_info .info {
   margin-top: 3em;
 }
 
-.info p {
+.personal_info .info div,
+.personal_info .info p {
   margin: 0.6em 0;
 }
 
-.info em {
+.personal_info .info em {
   display: inline-block;
   width: 5em;
-  font-weight: 800;
+  font-weight: 600;
   font-style: normal;
 }
 
-.title {
-  margin: 8rem 0 4rem;
-  font-size: 2.2rem;
-}
-
-.title span {
-  padding: 0 1em 0.3em 0.2em;
-  padding-bottom: 0.3em;
-  border-bottom: 3px solid #6667ab;
+.personal_info .info .btn {
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .skills > li + li {
@@ -146,17 +175,6 @@ h4 {
   vertical-align: middle;
 }
 
-.tech_stack li {
-  display: inline-block;
-  padding: 0.2em 1em;
-  border-radius: 0.5em;
-  font-size: 1rem;
-  color: #444;
-  background-color: #6667ab;
-  color: #fff;
-  letter-spacing: 0.05em;
-}
-
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,26 +205,20 @@ h4 {
   padding: 0 2em;
 }
 
-.project_name {
+.project .project_name {
   font-size: 1.5rem;
+  letter-spacing: 0.03em;
 }
 
-.project_intro {
+.project .project_intro {
   margin-bottom: 1.5em;
 }
 
-.project a {
-  display: inline-block;
-  margin-right: 1em;
-  padding: 0.2em;
-  border-bottom: 2px solid #6667ab;
-}
-
 .project .tech_stack {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
-.project_intro {
+.project .project_intro {
   margin-top: 0.5em;
   color: #666;
 }
@@ -278,6 +290,20 @@ h4 {
   line-height: 1.6;
 }
 
+.work .experience ul ul {
+  margin: 0.5em 0;
+}
+
+.work .experience ul ul li {
+  line-height: 1.6;
+}
+
+.work .experience ul ul li::before {
+  content: '-';
+  margin-right: 0.5em;
+  color: #999;
+}
+
 .work .experience > ul > li::before {
   content: '';
   display: inline-block;
@@ -286,19 +312,5 @@ h4 {
   margin-right: 0.2em;
   background-color: #999;
   vertical-align: middle;
-}
-
-.work .experience ul ul {
-  margin: 0.5em 0;
-}
-
-.work .experience li li {
-  line-height: 1.6;
-}
-
-.work .experience li li::before {
-  content: '-';
-  margin-right: 0.5em;
-  color: #999;
 }
 /*# sourceMappingURL=style.css.map */
