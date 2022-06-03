@@ -101,6 +101,10 @@
   width: 100%;
 }
 
+.profile .print {
+  display: none;
+}
+
 .profile .tech_stack li {
   display: inline-block;
   margin-bottom: 1em;
@@ -113,11 +117,31 @@
   letter-spacing: 0.05em;
 }
 
-.personal_info .name {
-  padding-bottom: 0.3em;
+.personal_info .header {
+  padding-bottom: 1.2rem;
   margin-bottom: 2.5rem;
   border-bottom: 3px solid #6667ab;
+}
+
+.personal_info .header div {
+  position: relative;
+}
+
+.personal_info .header h1 {
   font-size: 4rem;
+}
+
+.personal_info .header .home_btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 0.5em 0.7em;
+  background-color: #6667ab;
+  border-radius: 0.5em;
+  color: #fff;
+  font-size: 1.4rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .personal_info .intro {
@@ -152,10 +176,6 @@
 
 .personal_info .info div .link_name .icon {
   margin-left: 0.2em;
-}
-
-.personal_info .info div .print {
-  display: none;
 }
 
 .skills .skill + .skill {
@@ -333,11 +353,11 @@
   .profile .top {
     position: absolute;
   }
+  .profile .print {
+    display: block;
+  }
   .personal_info .info div .link_name .icon {
     display: none;
-  }
-  .personal_info .info div .print {
-    display: block;
   }
 }
 

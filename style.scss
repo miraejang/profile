@@ -101,6 +101,10 @@ $ligth-grey: #999;
     }
   }
 
+  .print {
+    display: none;
+  }
+
   .tech_stack li {
     display: inline-block;
     margin-bottom: 1em;
@@ -115,11 +119,30 @@ $ligth-grey: #999;
 }
 
 .personal_info {
-  .name {
-    padding-bottom: 0.3em;
+  .header {
+    padding-bottom: 1.2rem;
     margin-bottom: 2.5rem;
     border-bottom: 3px solid $veri-peri;
-    font-size: 4rem;
+
+    div {
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .home_btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      padding: 0.5em 0.7em;
+      background-color: $veri-peri;
+      border-radius: 0.5em;
+      color: #fff;
+      font-size: 1.4rem;
+      transform: translateY(-50%);
+    }
   }
 
   .intro {
@@ -148,10 +171,6 @@ $ligth-grey: #999;
         .icon {
           margin-left: 0.2em;
         }
-      }
-
-      .print {
-        display: none;
       }
     }
   }
@@ -326,17 +345,19 @@ $ligth-grey: #999;
 }
 
 @media print {
-  .profile .top {
-    position: absolute;
+  .profile {
+    .top {
+      position: absolute;
+    }
+
+    .print {
+      display: block;
+    }
   }
 
   .personal_info .info div {
     .link_name .icon {
       display: none;
-    }
-
-    .print {
-      display: block;
     }
   }
 }
