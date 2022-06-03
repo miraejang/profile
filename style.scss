@@ -339,13 +339,12 @@ $ligth-grey: #999;
     }
 
     .disc {
-      text-align: center;
+      text-align: left;
 
       .container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
+        align-items: flex-start;
         .detail {
           text-align: left;
         }
