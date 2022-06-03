@@ -326,12 +326,15 @@
   vertical-align: middle;
 }
 
-@media screen and (max-width: 68.25rem) {
+@media print, screen and (max-width: 68.25rem) {
   .project {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .project:nth-child(even) {
     -webkit-box-orient: vertical;

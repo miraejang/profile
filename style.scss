@@ -325,9 +325,10 @@ $ligth-grey: #999;
   }
 }
 
-@media screen and (max-width: $mobile-size) {
+@media print, screen and (max-width: $mobile-size) {
   .project {
     flex-direction: column;
+    align-items: flex-start;
 
     &:nth-child(even) {
       flex-direction: column;
