@@ -36,7 +36,8 @@ $ligth-grey: #999;
   }
 
   .wrap {
-    margin: 10rem 2rem 3rem;
+    max-width: 800px;
+    margin: 10rem 2rem 0;
   }
 
   .top {
@@ -62,11 +63,11 @@ $ligth-grey: #999;
   }
 
   .title {
-    margin: 8rem 0 4rem;
+    margin: 7rem 0 4rem;
     font-size: 2.2rem;
 
     span {
-      padding: 0 1em 0.3em 0.2em;
+      padding: 1rem 1em 0.3em 0.2em;
       padding-bottom: 0.3em;
       border-bottom: 3px solid $veri-peri;
     }
@@ -213,34 +214,38 @@ $ligth-grey: #999;
 }
 
 .project {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
   & + .project {
     margin-top: 3em;
     padding-top: 3em;
     border-top: 1px solid #e1e1e1;
   }
 
-  .img,
-  .disc {
-    padding: 0 2em;
+  .project_name h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .project_content {
+    display: flex;
+    width: 100%;
+
+    margin-top: 2.2em;
+    align-items: center;
+  }
+
+  &:nth-child(even) .project_content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &:nth-child(odd) .disc {
+    margin-left: 3rem;
   }
 
   img {
     max-width: 300px;
     padding: 0.2em;
     border: 2px solid $veri-peri;
-  }
-
-  .project_name {
-    font-size: 1.5rem;
-    letter-spacing: 0.03em;
   }
 
   .project_intro {
@@ -252,20 +257,17 @@ $ligth-grey: #999;
     margin-top: 1.2em;
   }
 
-  .tech_stack {
-    margin-top: 2.2em;
-  }
-
   .detail {
     margin-top: 0.5em;
 
     p {
+      display: flex;
       margin-top: 0.8em;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
 
       &::before {
         content: '✔';
-        margin: 0 1em;
+        margin: 0 1em 0 0.6em;
         color: $veri-peri;
         vertical-align: middle;
         font-weight: 700;
@@ -344,6 +346,12 @@ $ligth-grey: #999;
   }
 }
 
+.page {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+}
+
 @media print {
   .profile {
     .top {
@@ -360,32 +368,16 @@ $ligth-grey: #999;
       display: none;
     }
   }
+
+  .page {
+    display: flex;
+  }
 }
 
 @media print, screen and (max-width: $mobile-size) {
   .project {
-    flex-direction: column;
-    align-items: flex-start;
-
-    &:nth-child(even) {
-      flex-direction: column;
-    }
-
-    .img {
-      padding-bottom: 2em;
-    }
-
-    .disc {
-      text-align: left;
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .detail {
-          text-align: left;
-        }
-      }
+    img {
+      max-width: 220px;
     }
   }
 }
