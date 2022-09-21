@@ -214,10 +214,13 @@ $ligth-grey: #999;
 }
 
 .project {
-  &:not(:first-child) {
-    margin-top: 3em;
+  &:not(:last-child) {
+    padding-bottom: 3em;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  &:not(:first-of-type) {
     padding-top: 3em;
-    border-top: 1px solid #e1e1e1;
   }
 
   .project_name h3 {
@@ -349,6 +352,7 @@ $ligth-grey: #999;
 .page {
   display: none;
   width: 100%;
+  font-size: 12px;
   justify-content: space-between;
 }
 

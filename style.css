@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'SeoulNamsanM';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff')
-    format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,9 +21,9 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-family: 'SeoulNamsanM';
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "SeoulNamsanM";
   color: #333;
   border-bottom: 10px solid #6667ab;
   word-break: keep-all;
@@ -143,7 +142,7 @@
   color: #fff;
   font-size: 1.4rem;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .personal_info .intro {
@@ -161,8 +160,8 @@
   display: flex;
   margin: 0.6em 0;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .personal_info .info div .link_name {
@@ -212,10 +211,13 @@
   vertical-align: middle;
 }
 
-.project:not(:first-child) {
-  margin-top: 3em;
+.project:not(:last-child) {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.project:not(:first-of-type) {
   padding-top: 3em;
-  border-top: 1px solid #e1e1e1;
 }
 
 .project .project_name h3 {
@@ -230,18 +232,18 @@
   width: 100%;
   margin-top: 2.2em;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project:nth-child(even) .project_content {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .project:nth-child(odd) .disc {
@@ -354,9 +356,10 @@
 .page {
   display: none;
   width: 100%;
+  font-size: 12px;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media print {
