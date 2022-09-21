@@ -63,11 +63,11 @@ $ligth-grey: #999;
   }
 
   .title {
-    margin: 7rem 0 4rem;
+    margin: 8rem 0 4rem;
     font-size: 2.2rem;
 
     span {
-      padding: 1rem 1em 0.3em 0.2em;
+      padding: 0 1em 0.3em 0.2em;
       padding-bottom: 0.3em;
       border-bottom: 3px solid $veri-peri;
     }
@@ -179,7 +179,7 @@ $ligth-grey: #999;
 
 .skills {
   .skill {
-    & + .skill {
+    &:not(:first-child) {
       margin-top: 3em;
     }
 
@@ -214,7 +214,7 @@ $ligth-grey: #999;
 }
 
 .project {
-  & + .project {
+  &:not(:first-child) {
     margin-top: 3em;
     padding-top: 3em;
     border-top: 1px solid #e1e1e1;
@@ -369,11 +369,11 @@ $ligth-grey: #999;
     }
   }
 
-  .skill .skill_name,
-  .projects .title {
+  .skill .skill_name {
     padding-top: 1px;
   }
 
+  .projects .title,
   .work_experience .title {
     padding-top: 2px;
   }

@@ -62,12 +62,12 @@
 }
 
 .profile .title {
-  margin: 7rem 0 4rem;
+  margin: 8rem 0 4rem;
   font-size: 2.2rem;
 }
 
 .profile .title span {
-  padding: 1rem 1em 0.3em 0.2em;
+  padding: 0 1em 0.3em 0.2em;
   padding-bottom: 0.3em;
   border-bottom: 3px solid #6667ab;
 }
@@ -180,7 +180,7 @@
   margin-left: 0.2em;
 }
 
-.skills .skill + .skill {
+.skills .skill:not(:first-child) {
   margin-top: 3em;
 }
 
@@ -212,7 +212,7 @@
   vertical-align: middle;
 }
 
-.project + .project {
+.project:not(:first-child) {
   margin-top: 3em;
   padding-top: 3em;
   border-top: 1px solid #e1e1e1;
@@ -369,10 +369,10 @@
   .personal_info .info div .link_name .icon {
     display: none;
   }
-  .skill .skill_name,
-  .projects .title {
+  .skill .skill_name {
     padding-top: 1px;
   }
+  .projects .title,
   .work_experience .title {
     padding-top: 2px;
   }
