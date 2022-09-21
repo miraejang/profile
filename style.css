@@ -369,6 +369,13 @@
   .personal_info .info div .link_name .icon {
     display: none;
   }
+  .skill .skill_name,
+  .projects .title {
+    padding-top: 1px;
+  }
+  .work_experience .title {
+    padding-top: 2px;
+  }
   .page {
     display: -webkit-box;
     display: -ms-flexbox;

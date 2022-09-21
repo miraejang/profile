@@ -369,6 +369,15 @@ $ligth-grey: #999;
     }
   }
 
+  .skill .skill_name,
+  .projects .title {
+    padding-top: 1px;
+  }
+
+  .work_experience .title {
+    padding-top: 2px;
+  }
+
   .page {
     display: flex;
   }
