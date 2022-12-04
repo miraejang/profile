@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/miraejang/profile/static/css/main.2e1086ea.css",
+    "main.js": "/miraejang/profile/static/js/main.8406fa2e.js",
+    "index.html": "/miraejang/profile/index.html",
+    "main.2e1086ea.css.map": "/miraejang/profile/static/css/main.2e1086ea.css.map",
+    "main.8406fa2e.js.map": "/miraejang/profile/static/js/main.8406fa2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e1086ea.css",
+    "static/js/main.8406fa2e.js"
+  ]
+}
