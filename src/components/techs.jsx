@@ -45,6 +45,7 @@ const TECHS_DATA = {
     ],
   },
   'HTML / CSS': {
+    icons: ['html5.svg', 'css3.svg'],
     details: [
       '시맨틱 마크업을 준수합니다.',
       '웹접근성을 고려하여 작성합니다.',
@@ -85,12 +86,17 @@ const BADGES = [
   'css3.svg',
   'graphql.svg',
   'redux.svg',
+  'bootstrap.svg',
+  'sass.svg',
   'postcss.svg',
   'tailwindcss.svg',
   'styledcomponents.svg',
   'firebase.svg',
   'postman.svg',
   'git.svg',
+  'reactrouter.svg',
+  'axios.svg',
+  'figma.svg',
 ];
 
 const Techs = () => {
@@ -126,10 +132,22 @@ const Techs = () => {
         ))} */}
       </div>
       {Object.keys(TECHS_DATA).map(tech => (
-        <div className="tech">
+        <div className="tech" key={tech}>
           <p className="tech_name">
-            {TECHS_DATA[tech].icon && <img src={`./assets/icons/${TECHS_DATA[tech].icon}`} alt={tech} className="icon" />}
-            <span>{tech}</span>
+            {tech.includes('/') &&
+              tech.split(' / ').map((name, i) => (
+                <span key={name}>
+                  {i >= 1 && <span> / </span>}
+                  {TECHS_DATA[tech].icons && <img src={`./assets/icons/${TECHS_DATA[tech].icons[i]}`} alt={tech} className="icon" />}
+                  <span>{name}</span>
+                </span>
+              ))}
+            {!tech.includes('/') && (
+              <span>
+                {TECHS_DATA[tech].icon && <img src={`./assets/icons/${TECHS_DATA[tech].icon}`} alt={tech} className="icon" />}
+                <span>{tech}</span>
+              </span>
+            )}
           </p>
           <ul className="tech_detail">
             {TECHS_DATA[tech].details.map((detail, i) => (

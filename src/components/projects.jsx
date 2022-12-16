@@ -80,7 +80,7 @@ const Projects = () => {
         <span>프로젝트</span>
       </h2>
       {Object.keys(PROJECTS_DATA).map(project => (
-        <div className="project">
+        <div className="project" key={project}>
           <div className="project_name">
             <h3>{project}</h3>
             <div className="btn_box">
@@ -102,14 +102,14 @@ const Projects = () => {
               <div className="container">
                 <div className="tech_stack">
                   <ul>
-                    {PROJECTS_DATA[project].techs.map((tech, i) => (
-                      <li key={i}>{tech}</li>
+                    {PROJECTS_DATA[project].techs.map(tech => (
+                      <li key={tech}>{tech}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="detail">
                   {PROJECTS_DATA[project].features.map((feature, i) => (
-                    <p>{feature}</p>
+                    <p key={i}>{feature}</p>
                   ))}
                 </div>
               </div>
