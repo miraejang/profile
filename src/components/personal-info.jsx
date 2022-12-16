@@ -15,7 +15,7 @@ const PersonalInfo = () => {
       </header>
       <p className="intro">
         안녕하세요😊 <br />
-        가장 효율적인 해결책을 고민하는 프론트엔드 개발자 입니다.
+        가장 효율적인 해결책을 고민하는 프론트엔드 개발자입니다.
       </p>
       <div className="info">
         <div className="email">

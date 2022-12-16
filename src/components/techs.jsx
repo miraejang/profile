@@ -18,7 +18,7 @@ const TECHS_DATA = {
     details: [
       '라이프사이클을 이해하고 사용할 수 있습니다.',
       '조건부 렌더링을 할 수 있습니다',
-      '속성을 바인딩 할 수 있습니다.',
+      '속성을 바인딩할 수 있습니다.',
       '이벤트를 등록하고 핸들링할 수 있습니다.',
       '양방향 데이터 바인딩을 할 수 있습니다.',
       'Vuex, Vue Router을 활용할 수 있습니다.',
@@ -27,8 +27,8 @@ const TECHS_DATA = {
   'JavaScript': {
     icon: 'javascript.svg',
     details: [
-      'ES6 이상을 문법을 사용할 수 있습니다.',
-      '데이터의 타입을 알고, 호이스팅에 대해 이해하고있습니다.',
+      'ES6+ 문법을 사용할 수 있습니다.',
+      '데이터의 타입을 알고, 호이스팅에 대해 이해하고 있습니다.',
       '배열과 객체를 활용할 수 있습니다.',
       'Class 문법을 사용할 수 있습니다.',
       '동기와 비동기를 이해하고 사용할 수 있습니다.',
@@ -38,9 +38,9 @@ const TECHS_DATA = {
     icon: 'git.svg',
     details: [
       'Repository를 생성하고 local에 저장할 수 있습니다.',
-      'Repository의 내용을 local에 push, pull할 수 있습니다.',
-      'branch create, checkout, merge, delete할 수 있습니다.',
-      'commit한 내용을 reset, revert, cherry-pick할 수 있습니다.',
+      'Repository의 내용을 local에 push, pull 할 수 있습니다.',
+      'branch create, checkout, merge, delete 할 수 있습니다.',
+      'commit 한 내용을 reset, revert, cherry-pick 할 수 있습니다.',
       'stash를 사용할 수 있습니다.',
     ],
   },
