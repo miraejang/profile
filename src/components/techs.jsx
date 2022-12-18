@@ -1,161 +1,191 @@
 import React from 'react';
 
 const TECHS_DATA = {
-  'React': {
-    icon: 'react.svg',
-    details: [
-      'State와 Props를 이해하고 있습니다.',
-      'Class Component와 Function Component를 사용할 수 있습니다.',
-      'React Hook을 사용할 수 있습니다.',
-      'React Router, axios을 사용할 수 있습니다.',
-      'Redux를 이용한 상태 관리를 할 수 있습니다.',
-      'Dependency Injection을 할 수 있습니다.',
-      'Pure Component와 memo로 Re-Render를 방지할 수 있습니다.',
-    ],
+  Front_end: {
+    react: {
+      name: 'React',
+      icon: 'react',
+      desc: `React를 사용한 웹앱을 제작할 수 있습니다.`,
+      sub_techs: {
+        'React Router': 'reactrouter',
+        'Axios': 'axios',
+      },
+    },
+    javascript: {
+      name: 'JavaScript',
+      icon: 'javascript',
+      desc: 'ES6+ 구문을 사용합니다. Prototype, Hoisting, Scope, Closure를 이해하고 있으며 브라우저 API를 사용할 수 있습니다.',
+      sub_techs: null,
+    },
+    typescript: {
+      name: 'TypeScript',
+      icon: 'typescript',
+      desc: '안정성 있는 개발을 위해 TypeScript를 사용할 수 있습니다.',
+      sub_techs: null,
+    },
+    vue: {
+      name: 'Vue.js',
+      icon: 'vuedotjs',
+      desc: `Vue.js를 사용한 웹앱을 제작할 수 있습니다.`,
+      sub_techs: null,
+    },
+    graphql: { name: 'GraphQL', icon: 'graphql', desc: '리소스들과 필요한 데이터를 관리하여 사용할 수 있습니다.', sub_techs: null },
+    redux: { name: 'Redux', icon: 'redux', desc: '상태 관리를 할 수 있습니다.', sub_techs: null },
+    css: {
+      name: 'CSS',
+      icon: 'css3',
+      desc: '레이아웃을 구성하고 스타일링할 수 있습니다. 다수의 반응형 웹사이트를 제작해 본 경험이 있습니다.',
+      sub_techs: {
+        'Sass': 'sass',
+        'PostCSS': 'postcss',
+        'Tailwind CSS': 'tailwindcss',
+        'styled-components': 'styledcomponents',
+      },
+    },
+    html: {
+      name: 'HTML',
+      icon: 'html5',
+      desc: '시맨틱 마크업, 웹 접근성, 크로스 브라우징, SEO를 고려하여 작성할 수 있습니다. 다수의 웹 사이트를 제작해 본 경험이 있습니다.',
+      sub_techs: {
+        Bootstrap: 'bootstrap',
+      },
+    },
   },
-  'Vue.js': {
-    icon: 'vuedotjs.svg',
-    details: [
-      '라이프사이클을 이해하고 사용할 수 있습니다.',
-      '조건부 렌더링을 할 수 있습니다',
-      '속성을 바인딩할 수 있습니다.',
-      '이벤트를 등록하고 핸들링할 수 있습니다.',
-      '양방향 데이터 바인딩을 할 수 있습니다.',
-      'Vuex, Vue Router을 활용할 수 있습니다.',
-    ],
-  },
-  'JavaScript': {
-    icon: 'javascript.svg',
-    details: [
-      'ES6+ 문법을 사용할 수 있습니다.',
-      '데이터의 타입을 알고, 호이스팅에 대해 이해하고 있습니다.',
-      '배열과 객체를 활용할 수 있습니다.',
-      'Class 문법을 사용할 수 있습니다.',
-      '동기와 비동기를 이해하고 사용할 수 있습니다.',
-    ],
-  },
-  'Git': {
-    icon: 'git.svg',
-    details: [
-      'Repository를 생성하고 local에 저장할 수 있습니다.',
-      'Repository의 내용을 local에 push, pull 할 수 있습니다.',
-      'branch create, checkout, merge, delete 할 수 있습니다.',
-      'commit 한 내용을 reset, revert, cherry-pick 할 수 있습니다.',
-      'stash를 사용할 수 있습니다.',
-    ],
-  },
-  'HTML / CSS': {
-    icons: ['html5.svg', 'css3.svg'],
-    details: [
-      '시맨틱 마크업을 준수합니다.',
-      '웹접근성을 고려하여 작성합니다.',
-      '크로스브라우징을 할 수 있습니다.',
-      '반응형 웹 제작을 할 수 있습니다.',
-      'flex, grid등 최근 업데이트 된 내용들도 사용할 수 있습니다.',
-    ],
+  Back_end: {
+    firebase: {
+      name: 'Firebase',
+      icon: 'firebase',
+      desc: 'Authentication, Realtime Database를 사용해 본 경험이 있습니다.',
+      sub_techs: null,
+    },
   },
 };
 
-// const BADGES = {
-//   'language': {
-//     html: 'html5.svg',
-//     css: 'css3.svg',
-//     javascript: 'javascript.svg',
-//   },
-//   'JavaScript Framework': {
-//     'React': 'react.svg',
-//     'vue.js': 'vuedotjs.svg',
-//   },
-//   'CSS Framework': {
-//     'PostCSS': 'postcss.svg',
-//     'Tailwind CSS': 'tailwindcss.svg',
-//     'Styled-Components': 'styledcomponents.svg',
-//   },
-//   'ect': {
-//     GraphQL: 'graphql.svg',
-//     Redux: 'redux.svg',
-//   },
-// };
-
-const BADGES = [
-  'typescript.svg',
-  'react.svg',
-  'vuedotjs.svg',
-  'javascript.svg',
-  'html5.svg',
-  'css3.svg',
-  'graphql.svg',
-  'redux.svg',
-  'bootstrap.svg',
-  'sass.svg',
-  'postcss.svg',
-  'tailwindcss.svg',
-  'styledcomponents.svg',
-  'firebase.svg',
-  'postman.svg',
-  'git.svg',
-  'reactrouter.svg',
-  'axios.svg',
-  'figma.svg',
-];
+const OTHERS_TECHS_DATA = {
+  Communication: {
+    git: {
+      name: 'Git',
+      icon: 'git',
+      desc: 'Git을 이용하여 버전 관리를 할 수 있고, 협업의 경험이 있습니다.',
+      sub_techs: {
+        GitHub: 'github',
+        GitLab: 'gitlab',
+      },
+    },
+    slack: {
+      name: 'Slack',
+      icon: 'slack',
+      desc: 'Slack을 이용한 소통, 협업을 경험이 있습니다.',
+      sub_techs: null,
+    },
+    figma: {
+      name: 'Figma',
+      icon: 'figma',
+      desc: 'Figma를 사용해보고, 디자이너와 협업해 본 경험이 있습니다.',
+      sub_techs: null,
+    },
+  },
+};
 
 const Techs = () => {
   return (
-    <section className="techs">
-      <h2 className="title">
+    <section className="tech_skills">
+      <h2 className="section_title">
         <span>기술</span>
       </h2>
-      <div className="badges">
-        <ul>
-          {BADGES.map(badge => (
-            <li key={badge} className="badge">
-              <div className="img">
-                <img src={`./assets/icons/${badge}`} alt={badge.slice(0, -4)} />
-              </div>
-            </li>
-          ))}
-        </ul>
-        {/* {Object.keys(BADGES).map(group => (
-          <div key={group}>
-            <p className="group_name">{group}</p>
-            <ul>
-              {Object.keys(BADGES[group]).map(badge => (
-                <li key={badge} className="badge">
-                  <div className="img">
-                    <img src={`./assets/icons/${BADGES[group][badge]}`} alt={badge} />
-                  </div>
-                  <div className="name">{badge}</div>
-                </li>
-              ))}
+      {Object.keys(TECHS_DATA).map(category => {
+        return (
+          <div className={`category ${category.toLowerCase()}`} key={category}>
+            <h3>{category.replace(/_/g, '-')}</h3>
+            <ul className="techs">
+              {Object.keys(TECHS_DATA[category]).map(tech => {
+                const { name, icon, desc, sub_techs, ...others } = TECHS_DATA[category][tech];
+
+                return (
+                  <li className={tech.toLowerCase()} key={tech}>
+                    <div className="card">
+                      <div className="card_main">
+                        <div className="tech_title">
+                          <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={tech} className="icon" />
+                          <h4>{name}</h4>
+                        </div>
+                        <div className="tech_desc">{desc}</div>
+                      </div>
+                      {sub_techs && (
+                        <div className="card_sub">
+                          <div className="related_techs">
+                            <h6>관련된 Tech</h6>
+                            <div className="tech_icons">
+                              {Object.keys(sub_techs).map(sub_tech => (
+                                <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt="" className="icon" key={sub_tech} />
+                              ))}
+                            </div>
+                            <p className="names">
+                              {Object.keys(sub_techs).map(sub_tech => (
+                                <span key={sub_tech}>{sub_tech}</span>
+                              ))}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
-        ))} */}
+        );
+      })}
+      <div className="category other_techs">
+        <h3>And other things</h3>
+        {Object.keys(OTHERS_TECHS_DATA).map(category => {
+          const sub_category = OTHERS_TECHS_DATA[category];
+
+          return (
+            <div className={`sub_category ${category.toLowerCase()}`} key={category}>
+              <h4>{category}</h4>
+              <ul className="techs">
+                {Object.keys(sub_category).map(techs => {
+                  const { name, icon, desc, sub_techs } = sub_category[techs];
+
+                  return (
+                    <li className={techs} key={techs}>
+                      <div className="card">
+                        <div className="card_main">
+                          <div className="tech_title">
+                            <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={techs} className="icon" />
+                            <h4>{name}</h4>
+                          </div>
+                          <div className="tech_desc">
+                            <p>{desc}</p>
+                          </div>
+                        </div>
+                        {sub_techs && (
+                          <div className="card_sub">
+                            <div className="related_techs">
+                              <h6>관련된 Tech</h6>
+                              <div className="tech_icons">
+                                {Object.keys(sub_techs).map(sub_tech => (
+                                  <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt="" className="icon" key={sub_tech} />
+                                ))}
+                              </div>
+                              <p className="names">
+                                {Object.keys(sub_techs).map(sub_tech => (
+                                  <span key={sub_tech}>{sub_tech}</span>
+                                ))}
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
       </div>
-      {Object.keys(TECHS_DATA).map(tech => (
-        <div className="tech" key={tech}>
-          <p className="tech_name">
-            {tech.includes('/') &&
-              tech.split(' / ').map((name, i) => (
-                <span key={name}>
-                  {i >= 1 && <span> / </span>}
-                  {TECHS_DATA[tech].icons && <img src={`./assets/icons/${TECHS_DATA[tech].icons[i]}`} alt={tech} className="icon" />}
-                  <span>{name}</span>
-                </span>
-              ))}
-            {!tech.includes('/') && (
-              <span>
-                {TECHS_DATA[tech].icon && <img src={`./assets/icons/${TECHS_DATA[tech].icon}`} alt={tech} className="icon" />}
-                <span>{tech}</span>
-              </span>
-            )}
-          </p>
-          <ul className="tech_detail">
-            {TECHS_DATA[tech].details.map((detail, i) => (
-              <li key={i}>{detail}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
     </section>
   );
 };

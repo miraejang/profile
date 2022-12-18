@@ -3,7 +3,7 @@ import React from 'react';
 const WorkExperience = () => {
   return (
     <section className="work_experience">
-      <h2 className="title">
+      <h2 className="section_title">
         <span>경력</span>
       </h2>
       <div className="experience">
@@ -18,14 +18,14 @@ const WorkExperience = () => {
           </div>
         </div>
         <div className="work_info">
-          <ul className="tech_stack">
-            <li>HTML/CSS</li>
-            <li>SCSS</li>
-            <li>jQuery</li>
-            <li>JavaScript</li>
-            <li>Vue.js</li>
-            <li>Gitlab</li>
-            <li>Slack</li>
+          <ul className="labels">
+            <li className="label">HTML/CSS</li>
+            <li className="label">SCSS</li>
+            <li className="label">jQuery</li>
+            <li className="label">JavaScript</li>
+            <li className="label">Vue.js</li>
+            <li className="label">Gitlab</li>
+            <li className="label">Slack</li>
           </ul>
           <div className="work_detail">
             <h4>퍼블리셔</h4>
@@ -62,9 +62,9 @@ const WorkExperience = () => {
           </div>
         </div>
         <div className="work_info">
-          <ul className="tech_stack">
-            <li>Photoshop</li>
-            <li>Cafe24</li>
+          <ul className="labels">
+            <li className="label">Photoshop</li>
+            <li className="label">Cafe24</li>
           </ul>
           <div className="work_detail">
             <h4>웹디자이너</h4>

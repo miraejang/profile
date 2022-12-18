@@ -29,12 +29,37 @@
   word-break: keep-all;
 }
 
+.profile h1,
+.profile h2,
+.profile h3,
+.profile h4,
+.profile h5,
+.profile h6 {
+  letter-spacing: 0.03em;
+}
+
+.profile h1 {
+  font-size: 4rem;
+}
+
+.profile h2 {
+  font-size: 2.2rem;
+}
+
 .profile h3 {
   font-size: 1.5rem;
 }
 
 .profile h4 {
   font-size: 1.3rem;
+}
+
+.profile h5 {
+  font-size: 1.15rem;
+}
+
+.profile h6 {
+  font-size: 1rem;
 }
 
 .profile .main {
@@ -60,12 +85,11 @@
   color: #fff;
 }
 
-.profile .title {
+.profile .section_title {
   margin: 8rem 0 4rem;
-  font-size: 2.2rem;
 }
 
-.profile .title span {
+.profile .section_title span {
   padding: 0 1em 0.3em 0.2em;
   padding-bottom: 0.3em;
   border-bottom: 3px solid #6667ab;
@@ -106,20 +130,24 @@
   display: none;
 }
 
-.profile .tech_stack {
-  margin: -0.5rem -0.1rem;
+.profile .labels {
+  margin: -0.2rem -0.1rem;
 }
 
-.profile .tech_stack li {
+.profile .labels .label {
   display: inline-block;
-  margin: 0.5em 0.1rem;
-  padding: 0.2em 1em;
-  border-radius: 0.5em;
+  margin: 0.2rem 0.1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
-  color: #444;
   background-color: #6667ab;
   color: #fff;
   letter-spacing: 0.05em;
+}
+
+.profile .labels .label.sm {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
 }
 
 .personal_info .header {
@@ -130,10 +158,6 @@
 
 .personal_info .header div {
   position: relative;
-}
-
-.personal_info .header h1 {
-  font-size: 4rem;
 }
 
 .personal_info .header .home_btn {
@@ -183,104 +207,144 @@
   margin-left: 0.2em;
 }
 
-.techs .badges {
-  margin: -0.5rem;
-}
-
-.techs .badges .group_name {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #777;
-}
-
-.techs .badges .badge {
-  display: inline-block;
-  margin: 0.5rem;
-  color: #666;
-  font-weight: 700;
-  text-align: center;
-}
-
-.techs .badges .badge .img {
+.tech_skills .category {
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border: 3px solid #f1f1f1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tech_skills .category + .category {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tech_skills .sub_category {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.tech_skills .techs {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem 1rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.8rem;
+}
+
+.tech_skills .techs li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tech_skills .techs li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.tech_skills .techs li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.tech_skills .card {
+  width: 100%;
+  padding: 1.5rem 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+}
+
+.tech_skills .tech_icons .icon {
+  width: 2.2rem;
+}
+
+.tech_skills .tech_icons .icon + .icon {
+  margin-left: 0.5rem;
+}
+
+.tech_skills .tech_icons .githubPages {
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  width: 5rem;
+  border-radius: 0.5rem;
+  background-color: #2e71af;
+}
+
+.tech_skills .card_main .tech_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-.techs .badges .badge img {
-  width: 70%;
-  height: 70%;
+.tech_skills .card_main .tech_title .icon {
+  width: 3.6rem;
+  margin-right: 0.7rem;
 }
 
-.techs .badges .badge .name {
+.tech_skills .card_main .tech_title .icon.size_m {
+  width: 3.2rem;
+}
+
+.tech_skills .card_main .tech_desc {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+.tech_skills .card_sub {
+  padding: 0 0.5rem;
+  margin-top: 2rem;
+}
+
+.tech_skills .card_sub .related_techs {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tech_skills .card_sub .related_techs .tech_icons {
+  margin-top: 1rem;
+}
+
+.tech_skills .card_sub .names {
   margin-top: 0.5rem;
+  line-height: 1.3;
 }
 
-.techs .tech:not(:first-child) {
-  margin-top: 3em;
-}
-
-.techs .tech .tech_name {
+.tech_skills .card_sub .names span {
   display: inline-block;
-  font-weight: 900;
-  font-size: 1.3rem;
-  color: #6667ab;
-  letter-spacing: 0.08em;
+  word-break: keep-all;
 }
 
-.techs .tech .tech_name .icon {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 1rem;
-  vertical-align: middle;
+.tech_skills .card_sub .names span:not(:last-of-type)::after {
+  content: ',';
+  margin-right: 0.3rem;
 }
 
-.techs .tech .tech_detail {
-  margin: 1em;
+.projects {
+  margin-bottom: 10rem;
 }
 
-.techs .tech .tech_detail li {
-  line-height: 1.8;
-  font-size: 1.1rem;
-  color: #444;
+.project {
+  margin-bottom: 3rem;
 }
 
-.techs .tech .tech_detail li::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  margin-right: 0.8em;
-  background-color: #999;
-  vertical-align: middle;
+.project + .project {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
 }
 
-.project:not(:last-child) {
-  padding-bottom: 3em;
-  border-bottom: 1px solid #e1e1e1;
-}
-
-.project:not(:first-of-type) {
-  padding-top: 3em;
-}
-
-.project .project_name h3 {
-  font-size: 1.5rem;
-  letter-spacing: 0.03em;
-}
-
-.project .project_content {
+.project .project_contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,16 +352,7 @@
   margin-top: 2.2em;
 }
 
-.project .project_content .img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.project:nth-child(even) .project_content {
+.project:nth-child(even) .project_contents {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -307,44 +362,87 @@
           justify-content: space-between;
 }
 
-.project:nth-child(odd) .disc {
-  margin-left: 3rem;
-}
-
-.project img {
-  max-width: 300px;
-  padding: 0.2em;
-  border: 2px solid #6667ab;
-}
-
-.project .project_intro {
-  margin-top: 0.5em;
-  color: #666;
-}
-
-.project .btn_box {
-  margin-top: 1.2em;
-}
-
-.project .detail {
-  margin-top: 2rem;
-}
-
-.project .detail p {
+.project .project_thumbnail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0.8em;
-  font-size: 1.1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.project .detail p::before {
+.project .project_thumbnail img {
+  max-width: 300px;
+  padding: 0.3em;
+  border: 3px solid #6667ab;
+}
+
+.project:nth-child(odd) .project_info {
+  margin-left: 3rem;
+}
+
+.project:nth-child(even) .project_info {
+  margin-right: 1rem;
+}
+
+.project .project_info {
+  width: 100%;
+}
+
+.project .project_info > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.project .project_info > ul > li + li {
+  margin-top: 2rem;
+}
+
+.project .project_info > ul > li.page_links h5 {
+  line-height: 2;
+}
+
+.project .project_info > ul > li h5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 8rem;
+          flex: 0 0 8rem;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.project .project_info > ul > li h5::before {
+  content: '';
+  display: inline-block;
+  background-color: #333;
+  width: 1px;
+  height: 80%;
+  margin-top: 10%;
+  margin-right: 0.4rem;
+}
+
+.project .project_info .features li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.project .project_info .features li::before {
   content: '✔';
-  margin: 0 1em 0 0.6em;
+  margin-right: 0.5rem;
   color: #6667ab;
   vertical-align: middle;
   font-weight: 700;
   font-size: 0.8em;
+}
+
+.project .project_info .features li + li {
+  margin-top: 0.4rem;
 }
 
 .work_experience .experience {
@@ -372,7 +470,6 @@
 .work_experience .experience .work_detail h4 {
   margin: 1em 0.4em;
   font-weight: 400;
-  color: #666;
   letter-spacing: 0.06em;
 }
 
