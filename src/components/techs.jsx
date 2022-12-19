@@ -29,7 +29,7 @@ const TECHS_DATA = {
       desc: `Vue.js를 사용한 웹앱을 제작할 수 있습니다.`,
       sub_techs: null,
     },
-    graphql: { name: 'GraphQL', icon: 'graphql', desc: '리소스들과 필요한 데이터를 관리하여 사용할 수 있습니다.', sub_techs: null },
+    graphql: { name: 'GraphQL', icon: 'graphql', desc: '리소스와 데이터를 필요에 맞게 작성하여 사용할 수 있습니다.', sub_techs: null },
     redux: { name: 'Redux', icon: 'redux', desc: '상태 관리를 할 수 있습니다.', sub_techs: null },
     css: {
       name: 'CSS',
