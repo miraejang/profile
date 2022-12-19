@@ -5,8 +5,11 @@
   font-style: normal;
 }
 
+// common
 $font: 'SeoulNamsanM';
 $mobile-size: 68.25rem;
+
+// colors
 $veri-peri: #6667ab;
 $light-veri-peri: #acaedf;
 $white: #fff;
@@ -15,6 +18,10 @@ $cloudy: #e0e0e0;
 $dark-grey: #333;
 $grey: #666;
 $ligth-grey: #999;
+
+// tech_skills icon size
+$icon-size-defualt: 3.6rem;
+$icon-size-small: $icon-size-defualt * 0.85;
 
 ::selection {
   background-color: $veri-peri;
@@ -39,7 +46,7 @@ $ligth-grey: #999;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2 {
     font-size: 2.2rem;
@@ -68,12 +75,12 @@ $ligth-grey: #999;
     left: 0;
     z-index: 1000;
     width: 100%;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
     background: $veri-peri;
     background: linear-gradient(-45deg, rgba(102, 103, 171, 1) 0%, rgba(160, 162, 205, 1) 100%);
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
 
     p {
       color: $white;
@@ -84,8 +91,8 @@ $ligth-grey: #999;
     margin: 8rem 0 4rem;
 
     span {
-      padding: 0 1em 0.3em 0.2em;
-      padding-bottom: 0.3em;
+      padding: 0 1rem 0.3rem 0.2rem;
+      padding-bottom: 0.3rem;
       border-bottom: 3px solid $veri-peri;
     }
   }
@@ -93,8 +100,8 @@ $ligth-grey: #999;
   .btn {
     display: inline-block;
     position: relative;
-    margin-right: 1em;
-    padding: 0.5em;
+    margin-right: 1rem;
+    padding: 0.5rem;
     background-color: $while-smoke;
     transition: background-color 0.3s;
 
@@ -120,7 +127,7 @@ $ligth-grey: #999;
   }
 
   .print {
-    display: none;
+    display: none !important;
   }
 
   .labels {
@@ -134,7 +141,7 @@ $ligth-grey: #999;
       font-size: 1rem;
       background-color: $veri-peri;
       color: $white;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.05rem;
 
       &.sm {
         padding: 0.1rem 0.5rem;
@@ -158,9 +165,9 @@ $ligth-grey: #999;
       position: absolute;
       top: 50%;
       right: 0;
-      padding: 0.5em 0.7em;
+      padding: 0.5rem 0.7rem;
       background-color: $veri-peri;
-      border-radius: 0.5em;
+      border-radius: 0.5rem;
       color: $white;
       font-size: 1.4rem;
       transform: translateY(-50%);
@@ -168,31 +175,31 @@ $ligth-grey: #999;
   }
 
   .intro {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.7;
   }
 
   .info {
-    margin-top: 3em;
+    margin-top: 3rem;
 
-    div {
+    & > div {
       display: flex;
-      margin: 0.6em 0;
+      margin: 0.6rem 0;
       align-items: center;
 
-      .link_name {
+      .info_name {
         display: inline-block;
         position: relative;
-        margin-right: 1em;
-        padding: 0.5em;
+        margin-right: 1rem;
+        padding: 0.5rem;
         background-color: $while-smoke;
         font-weight: 600;
         font-size: 1rem;
         vertical-align: middle;
+      }
 
-        .icon {
-          margin-left: 0.2em;
-        }
+      .icon {
+        margin-right: 0.5rem;
       }
     }
   }
@@ -211,12 +218,14 @@ $ligth-grey: #999;
   }
 
   .sub_category {
+    width: 100%;
     margin-top: 2rem;
     padding: 0 2rem;
   }
 
   .techs {
     display: grid;
+    width: 100%;
     gap: 1rem 1rem;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 1.8rem;
@@ -265,14 +274,13 @@ $ligth-grey: #999;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
 
       .icon {
-        width: 3.6rem;
+        width: $icon-size-defualt;
         margin-right: 0.7rem;
 
-        &.size_m {
-          width: 3.2rem;
+        &.small {
+          width: $icon-size-small;
         }
       }
     }
@@ -314,9 +322,6 @@ $ligth-grey: #999;
   }
 }
 
-.projects {
-  margin-bottom: 10rem;
-}
 .project {
   margin-bottom: 3rem;
 
@@ -325,10 +330,19 @@ $ligth-grey: #999;
     border-top: 1px solid $cloudy;
   }
 
+  .project_title {
+    display: flex;
+    align-items: center;
+
+    .page_links {
+      margin-left: 2rem;
+    }
+  }
+
   .project_contents {
     display: flex;
     width: 100%;
-    margin-top: 2.2em;
+    margin-top: 2.2rem;
   }
 
   &:nth-child(even) .project_contents {
@@ -341,8 +355,8 @@ $ligth-grey: #999;
     align-items: center;
 
     img {
-      max-width: 300px;
-      padding: 0.3em;
+      max-width: 18.75rem;
+      padding: 0.3rem;
       border: 3px solid $veri-peri;
     }
   }
@@ -360,7 +374,7 @@ $ligth-grey: #999;
 
     & > ul > li {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
 
       & + li {
         margin-top: 2rem;
@@ -374,16 +388,6 @@ $ligth-grey: #999;
         flex: 0 0 8rem;
         word-break: keep-all;
         white-space: nowrap;
-
-        &::before {
-          content: '';
-          display: inline-block;
-          background-color: $dark-grey;
-          width: 1px;
-          height: 80%;
-          margin-top: 10%;
-          margin-right: 0.4rem;
-        }
       }
     }
 
@@ -399,7 +403,7 @@ $ligth-grey: #999;
           color: $veri-peri;
           vertical-align: middle;
           font-weight: 700;
-          font-size: 0.8em;
+          font-size: 0.8rem;
         }
 
         & + li {
@@ -415,50 +419,50 @@ $ligth-grey: #999;
     display: flex;
 
     & + .experience {
-      margin-top: 2em;
+      margin-top: 2rem;
     }
 
     .company_info {
-      margin-right: 3em;
+      margin-right: 3rem;
 
       .period {
-        margin-top: 1.5em;
+        margin-top: 1.5rem;
         line-height: 1.6;
         font-size: 1.1rem;
         color: $ligth-grey;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.05rem;
       }
     }
 
     .work_detail {
       h4 {
-        margin: 1em 0.4em;
+        margin: 1rem 0.4rem;
         font-weight: 400;
         letter-spacing: 0.06em;
       }
 
       p {
         line-height: 1.7;
-        font-size: 1em;
+        font-size: 1rem;
         color: $grey;
       }
 
       ul {
-        padding: 0 1em;
+        padding: 0 1rem;
 
         li {
           line-height: 1.6;
         }
 
         ul {
-          margin: 0.5em 0;
+          margin: 0.5rem 0;
 
           li {
             line-height: 1.6;
 
             &::before {
               content: '-';
-              margin-right: 0.5em;
+              margin-right: 0.5rem;
               color: $ligth-grey;
             }
           }
@@ -470,7 +474,7 @@ $ligth-grey: #999;
         display: inline-block;
         width: 4px;
         height: 4px;
-        margin-right: 0.2em;
+        margin-right: 0.2rem;
         background-color: $ligth-grey;
         vertical-align: middle;
       }
@@ -478,41 +482,135 @@ $ligth-grey: #999;
   }
 }
 
-.page {
-  display: none;
-  width: 100%;
-  font-size: 12px;
-  justify-content: space-between;
-}
-
 @media print {
+  html {
+    font-size: 14px;
+  }
+  $icon-size-defualt: 2.5rem;
+  $icon-size-small: $icon-size-defualt * 0.8;
+
   .profile {
+    .main {
+      margin-top: 7rem;
+      margin-bottom: 2rem;
+    }
+
     .top {
       position: absolute;
     }
 
     .print {
+      display: block !important;
+    }
+
+    .no_print {
+      display: none !important;
+    }
+
+    .section_title {
+      margin: 7rem 0 3rem;
+    }
+
+    .labels .label {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+
+  .tech_skills {
+    .category {
+      margin-bottom: 1.5rem;
+    }
+
+    .other_techs {
+      margin-bottom: 0;
+    }
+
+    .techs {
       display: block;
+      margin-top: 0.8rem;
+    }
+
+    .card {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: none;
+      text-align: left;
+    }
+
+    .card_main {
+      display: flex;
+      align-items: flex-start;
+
+      .tech_title {
+        flex: 0 0 12rem;
+        justify-content: flex-start;
+
+        .icon {
+          width: $icon-size-defualt;
+
+          &.small {
+            width: $icon-size-small;
+          }
+        }
+      }
+
+      .tech_desc {
+        margin: 0;
+        padding: 0.5rem 0;
+      }
+    }
+
+    .card_sub {
+      margin: 0;
+      padding: 0 0 0 12rem;
+
+      .related_techs {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid $cloudy;
+        border-radius: 0.3rem;
+
+        .names {
+          margin: 0 0 0 1rem;
+        }
+      }
     }
   }
 
-  .personal_info .info div {
-    .link_name .icon {
-      display: none;
+  .projects {
+    .project {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 2rem;
+
+      .project_contents {
+        display: block;
+        margin-top: 1.2rem;
+      }
+
+      .project_thumbnail {
+        width: 18rem;
+      }
+
+      .project_info {
+        margin: 0;
+
+        & > ul > li + li {
+          margin-top: 1.3rem;
+        }
+
+        h5 {
+          margin-bottom: 0;
+        }
+      }
+
+      .features,
+      .labels {
+        padding: 0 1rem;
+      }
     }
-  }
-
-  .tech .tech_name {
-    padding-top: 1px;
-  }
-
-  .projects .title,
-  .work_experience .title {
-    padding-top: 2px;
-  }
-
-  .page {
-    display: flex;
   }
 }
 

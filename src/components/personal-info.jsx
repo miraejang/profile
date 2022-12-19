@@ -1,3 +1,7 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faBook, faPen } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const PersonalInfo = () => {
@@ -18,28 +22,31 @@ const PersonalInfo = () => {
         가장 효율적인 해결책을 고민하는 프론트엔드 개발자입니다.
       </p>
       <div className="info">
-        <div className="email">
-          <span className="link_name">Email</span>
+        <div>
+          <div className="info_name">
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
+            <span>Email</span>
+          </div>
           <span className="link">jangmirae611@gmail.com</span>
         </div>
         <div>
-          <a className="btn link_name" href="https://github.com/miraejang" target="_blank" rel="noopener noreferrer">
+          <a className="btn info_name" href="https://github.com/miraejang" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} className="icon" />
             <span>Github</span>
-            <i className="icon fa-brands fa-github fa-xl"></i>
           </a>
           <span className="link print">https://github.com/miraejang</span>
         </div>
         <div>
-          <a className="btn link_name" href="https://infuture.notion.site/Study-4e55922f04fb49168e891160f2bc5614" target="_blank" rel="noopener noreferrer">
+          <a className="btn info_name" href="https://infuture.notion.site/Study-4e55922f04fb49168e891160f2bc5614" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faPen} className="icon" />
             <span>Study Note</span>
-            <i className="icon fa-solid fa-pen"></i>
           </a>
           <span className="link print">https://infuture.notion.site/Study-4e55922f04fb49168e891160f2bc5614</span>
         </div>
         <div>
-          <a className="btn link_name" href="https://in-future.tistory.com" target="_blank" rel="noopener noreferrer">
+          <a className="btn info_name" href="https://in-future.tistory.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faBook} className="icon" />
             <span>Blog</span>
-            <i className="icon fa-solid fa-book"></i>
           </a>
           <span className="link print">https://in-future.tistory.com</span>
         </div>

@@ -14,12 +14,14 @@ const TECHS_DATA = {
     javascript: {
       name: 'JavaScript',
       icon: 'javascript',
+      icon_size: 'small',
       desc: 'ES6+ 구문을 사용합니다. Prototype, Hoisting, Scope, Closure를 이해하고 있으며 브라우저 API를 사용할 수 있습니다.',
       sub_techs: null,
     },
     typescript: {
       name: 'TypeScript',
       icon: 'typescript',
+      icon_size: 'small',
       desc: '안정성 있는 개발을 위해 TypeScript를 사용할 수 있습니다.',
       sub_techs: null,
     },
@@ -34,7 +36,8 @@ const TECHS_DATA = {
     css: {
       name: 'CSS',
       icon: 'css3',
-      desc: '레이아웃을 구성하고 스타일링할 수 있습니다. 다수의 반응형 웹사이트를 제작해 본 경험이 있습니다.',
+      icon_size: 'small',
+      desc: '레이아웃을 구성하고 스타일링할 수 있습니다. \n다수의 반응형 웹사이트를 제작해 본 경험이 있습니다.',
       sub_techs: {
         'Sass': 'sass',
         'PostCSS': 'postcss',
@@ -45,7 +48,8 @@ const TECHS_DATA = {
     html: {
       name: 'HTML',
       icon: 'html5',
-      desc: '시맨틱 마크업, 웹 접근성, 크로스 브라우징, SEO를 고려하여 작성할 수 있습니다. 다수의 웹 사이트를 제작해 본 경험이 있습니다.',
+      icon_size: 'small',
+      desc: '시맨틱 마크업, 웹 접근성, 크로스 브라우징, SEO를 고려하여 작성할 수 있습니다. \n다수의 웹 사이트를 제작해 본 경험이 있습니다.',
       sub_techs: {
         Bootstrap: 'bootstrap',
       },
@@ -66,6 +70,7 @@ const OTHERS_TECHS_DATA = {
     git: {
       name: 'Git',
       icon: 'git',
+      icon_size: 'small',
       desc: 'Git을 이용하여 버전 관리를 할 수 있고, 협업의 경험이 있습니다.',
       sub_techs: {
         GitHub: 'github',
@@ -75,12 +80,14 @@ const OTHERS_TECHS_DATA = {
     slack: {
       name: 'Slack',
       icon: 'slack',
+      icon_size: 'small',
       desc: 'Slack을 이용한 소통, 협업을 경험이 있습니다.',
       sub_techs: null,
     },
     figma: {
       name: 'Figma',
       icon: 'figma',
+      icon_size: 'small',
       desc: 'Figma를 사용해보고, 디자이너와 협업해 본 경험이 있습니다.',
       sub_techs: null,
     },
@@ -99,25 +106,31 @@ const Techs = () => {
             <h3>{category.replace(/_/g, '-')}</h3>
             <ul className="techs">
               {Object.keys(TECHS_DATA[category]).map(tech => {
-                const { name, icon, desc, sub_techs, ...others } = TECHS_DATA[category][tech];
+                const { name, icon, icon_size, desc, sub_techs } = TECHS_DATA[category][tech];
 
                 return (
                   <li className={tech.toLowerCase()} key={tech}>
                     <div className="card">
                       <div className="card_main">
                         <div className="tech_title">
-                          <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={tech} className="icon" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={tech} className={`icon ${icon_size && icon_size}`} />
                           <h4>{name}</h4>
                         </div>
-                        <div className="tech_desc">{desc}</div>
+                        <div className="tech_desc">
+                          <p>
+                            {desc.split('\n').map(str => (
+                              <p>{str}</p>
+                            ))}
+                          </p>
+                        </div>
                       </div>
                       {sub_techs && (
                         <div className="card_sub">
                           <div className="related_techs">
                             <h6>관련된 Tech</h6>
-                            <div className="tech_icons">
+                            <div className="tech_icons no_print">
                               {Object.keys(sub_techs).map(sub_tech => (
-                                <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt="" className="icon" key={sub_tech} />
+                                <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt={sub_tech} className={`icon ${icon_size && icon_size}`} key={sub_tech} />
                               ))}
                             </div>
                             <p className="names">
@@ -146,27 +159,29 @@ const Techs = () => {
               <h4>{category}</h4>
               <ul className="techs">
                 {Object.keys(sub_category).map(techs => {
-                  const { name, icon, desc, sub_techs } = sub_category[techs];
+                  const { name, icon, icon_size, desc, sub_techs } = sub_category[techs];
 
                   return (
                     <li className={techs} key={techs}>
                       <div className="card">
                         <div className="card_main">
                           <div className="tech_title">
-                            <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={techs} className="icon" />
+                            <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={techs} className={`icon ${icon_size && icon_size}`} />
                             <h4>{name}</h4>
                           </div>
                           <div className="tech_desc">
-                            <p>{desc}</p>
+                            {desc.split('\n').map(str => (
+                              <p key={str}>{str}</p>
+                            ))}
                           </div>
                         </div>
                         {sub_techs && (
                           <div className="card_sub">
                             <div className="related_techs">
                               <h6>관련된 Tech</h6>
-                              <div className="tech_icons">
+                              <div className="tech_icons no_print">
                                 {Object.keys(sub_techs).map(sub_tech => (
-                                  <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt="" className="icon" key={sub_tech} />
+                                  <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt={sub_tech} className={`icon ${icon_size && icon_size}`} key={sub_tech} />
                                 ))}
                               </div>
                               <p className="names">

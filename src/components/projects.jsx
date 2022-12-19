@@ -67,12 +67,20 @@ const Projects = () => {
       </h2>
       {Object.keys(PROJECTS_DATA).map(project => {
         const { kr_name, github_link, page_link, thumnail, front_end, back_end, etc, features, deployment } = PROJECTS_DATA[project];
-        const project_name = project.replace(/\_/g, ' ');
+        const project_name = project.replace(/_/g, ' ');
 
         return (
           <div className={`project ${project.toLowerCase()}`} key={project}>
-            <div className="project_name">
+            <div className="project_title">
               <h3>{project_name}</h3>
+              <div className="page_links print">
+                <a className="btn" href={`${github_link}#readme`} target="_blank" rel="noopener noreferrer">
+                  상세 내용 보기
+                </a>
+                <a className="btn" href={page_link} target="_blank" rel="noopener noreferrer">
+                  {`${project_name} 페이지 보기`}
+                </a>
+              </div>
             </div>
             <div className="project_contents">
               <div className="project_thumbnail">
@@ -80,7 +88,7 @@ const Projects = () => {
               </div>
               <div className="project_info">
                 <ul className="info">
-                  <li className="page_links">
+                  <li className="page_links no_print">
                     <h5>자세히 보기</h5>
                     <div className="btn_box">
                       <a className="btn" href={`${github_link}#readme`} target="_blank" rel="noopener noreferrer">
@@ -122,7 +130,7 @@ const Projects = () => {
                     </li>
                   )}
                   {deployment && (
-                    <li>
+                    <li className="deployment no_print">
                       <h5>Deployment</h5>
                       <div className="labels">
                         <p className="label">{deployment}</p>

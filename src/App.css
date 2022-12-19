@@ -39,7 +39,7 @@
 }
 
 .profile h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .profile h2 {
@@ -73,12 +73,12 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  padding: 1em;
+  padding: 1rem;
   text-align: center;
   background: #6667ab;
   background: linear-gradient(-45deg, #6667ab 0%, #a0a2cd 100%);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.08rem;
 }
 
 .profile .top p {
@@ -90,16 +90,16 @@
 }
 
 .profile .section_title span {
-  padding: 0 1em 0.3em 0.2em;
-  padding-bottom: 0.3em;
+  padding: 0 1rem 0.3rem 0.2rem;
+  padding-bottom: 0.3rem;
   border-bottom: 3px solid #6667ab;
 }
 
 .profile .btn {
   display: inline-block;
   position: relative;
-  margin-right: 1em;
-  padding: 0.5em;
+  margin-right: 1rem;
+  padding: 0.5rem;
   background-color: #f5f5f5;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -127,7 +127,7 @@
 }
 
 .profile .print {
-  display: none;
+  display: none !important;
 }
 
 .profile .labels {
@@ -142,7 +142,7 @@
   font-size: 1rem;
   background-color: #6667ab;
   color: #fff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 
 .profile .labels .label.sm {
@@ -164,9 +164,9 @@
   position: absolute;
   top: 50%;
   right: 0;
-  padding: 0.5em 0.7em;
+  padding: 0.5rem 0.7rem;
   background-color: #6667ab;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   color: #fff;
   font-size: 1.4rem;
   -webkit-transform: translateY(-50%);
@@ -174,37 +174,37 @@
 }
 
 .personal_info .intro {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.7;
 }
 
 .personal_info .info {
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
-.personal_info .info div {
+.personal_info .info > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.6em 0;
+  margin: 0.6rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.personal_info .info div .link_name {
+.personal_info .info > div .info_name {
   display: inline-block;
   position: relative;
-  margin-right: 1em;
-  padding: 0.5em;
+  margin-right: 1rem;
+  padding: 0.5rem;
   background-color: #f5f5f5;
   font-weight: 600;
   font-size: 1rem;
   vertical-align: middle;
 }
 
-.personal_info .info div .link_name .icon {
-  margin-left: 0.2em;
+.personal_info .info > div .icon {
+  margin-right: 0.5rem;
 }
 
 .tech_skills .category {
@@ -222,6 +222,7 @@
 }
 
 .tech_skills .sub_category {
+  width: 100%;
   margin-top: 2rem;
   padding: 0 2rem;
 }
@@ -229,6 +230,7 @@
 .tech_skills .techs {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   gap: 1rem 1rem;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
@@ -284,7 +286,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
 }
 
 .tech_skills .card_main .tech_title .icon {
@@ -292,8 +293,8 @@
   margin-right: 0.7rem;
 }
 
-.tech_skills .card_main .tech_title .icon.size_m {
-  width: 3.2rem;
+.tech_skills .card_main .tech_title .icon.small {
+  width: 3.06rem;
 }
 
 .tech_skills .card_main .tech_desc {
@@ -331,10 +332,6 @@
   margin-right: 0.3rem;
 }
 
-.projects {
-  margin-bottom: 10rem;
-}
-
 .project {
   margin-bottom: 3rem;
 }
@@ -344,12 +341,25 @@
   border-top: 1px solid #e0e0e0;
 }
 
+.project .project_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project .project_title .page_links {
+  margin-left: 2rem;
+}
+
 .project .project_contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 2.2em;
+  margin-top: 2.2rem;
 }
 
 .project:nth-child(even) .project_contents {
@@ -372,8 +382,8 @@
 }
 
 .project .project_thumbnail img {
-  max-width: 300px;
-  padding: 0.3em;
+  max-width: 18.75rem;
+  padding: 0.3rem;
   border: 3px solid #6667ab;
 }
 
@@ -395,7 +405,7 @@
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 .project .project_info > ul > li + li {
@@ -414,16 +424,6 @@
   white-space: nowrap;
 }
 
-.project .project_info > ul > li h5::before {
-  content: '';
-  display: inline-block;
-  background-color: #333;
-  width: 1px;
-  height: 80%;
-  margin-top: 10%;
-  margin-right: 0.4rem;
-}
-
 .project .project_info .features li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,7 +438,7 @@
   color: #6667ab;
   vertical-align: middle;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .project .project_info .features li + li {
@@ -452,35 +452,35 @@
 }
 
 .work_experience .experience + .experience {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .work_experience .experience .company_info {
-  margin-right: 3em;
+  margin-right: 3rem;
 }
 
 .work_experience .experience .company_info .period {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
   line-height: 1.6;
   font-size: 1.1rem;
   color: #999;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 
 .work_experience .experience .work_detail h4 {
-  margin: 1em 0.4em;
+  margin: 1rem 0.4rem;
   font-weight: 400;
   letter-spacing: 0.06em;
 }
 
 .work_experience .experience .work_detail p {
   line-height: 1.7;
-  font-size: 1em;
+  font-size: 1rem;
   color: #666;
 }
 
 .work_experience .experience .work_detail ul {
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .work_experience .experience .work_detail ul li {
@@ -488,7 +488,7 @@
 }
 
 .work_experience .experience .work_detail ul ul {
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
 .work_experience .experience .work_detail ul ul li {
@@ -497,7 +497,7 @@
 
 .work_experience .experience .work_detail ul ul li::before {
   content: '-';
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
   color: #999;
 }
 
@@ -506,41 +506,120 @@
   display: inline-block;
   width: 4px;
   height: 4px;
-  margin-right: 0.2em;
+  margin-right: 0.2rem;
   background-color: #999;
   vertical-align: middle;
 }
 
-.page {
-  display: none;
-  width: 100%;
-  font-size: 12px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 @media print {
+  html {
+    font-size: 14px;
+  }
+  .profile .main {
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  }
   .profile .top {
     position: absolute;
   }
   .profile .print {
+    display: block !important;
+  }
+  .profile .no_print {
+    display: none !important;
+  }
+  .profile .section_title {
+    margin: 7rem 0 3rem;
+  }
+  .profile .labels .label {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+  .tech_skills .category {
+    margin-bottom: 1.5rem;
+  }
+  .tech_skills .other_techs {
+    margin-bottom: 0;
+  }
+  .tech_skills .techs {
     display: block;
+    margin-top: 0.8rem;
   }
-  .personal_info .info div .link_name .icon {
-    display: none;
+  .tech_skills .card {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-align: left;
   }
-  .tech .tech_name {
-    padding-top: 1px;
-  }
-  .projects .title,
-  .work_experience .title {
-    padding-top: 2px;
-  }
-  .page {
+  .tech_skills .card_main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .tech_skills .card_main .tech_title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12rem;
+            flex: 0 0 12rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .tech_skills .card_main .tech_title .icon {
+    width: 2.5rem;
+  }
+  .tech_skills .card_main .tech_title .icon.small {
+    width: 2rem;
+  }
+  .tech_skills .card_main .tech_desc {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  .tech_skills .card_sub {
+    margin: 0;
+    padding: 0 0 0 12rem;
+  }
+  .tech_skills .card_sub .related_techs {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.3rem;
+  }
+  .tech_skills .card_sub .related_techs .names {
+    margin: 0 0 0 1rem;
+  }
+  .projects .project {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+  .projects .project .project_contents {
+    display: block;
+    margin-top: 1.2rem;
+  }
+  .projects .project .project_thumbnail {
+    width: 18rem;
+  }
+  .projects .project .project_info {
+    margin: 0;
+  }
+  .projects .project .project_info > ul > li + li {
+    margin-top: 1.3rem;
+  }
+  .projects .project .project_info h5 {
+    margin-bottom: 0;
+  }
+  .projects .project .features,
+  .projects .project .labels {
+    padding: 0 1rem;
   }
 }
 
