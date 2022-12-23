@@ -117,11 +117,9 @@ const Techs = () => {
                           <h4>{name}</h4>
                         </div>
                         <div className="tech_desc">
-                          <p>
-                            {desc.split('\n').map(str => (
-                              <p key={str}>{str}</p>
-                            ))}
-                          </p>
+                          {desc.split('\n').map(str => (
+                            <p key={str}>{str}</p>
+                          ))}
                         </div>
                       </div>
                       {sub_techs && (
