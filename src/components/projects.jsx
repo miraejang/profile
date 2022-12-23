@@ -20,6 +20,15 @@ const PROJECTS_DATA = {
     ],
     deployment: 'GitHub Pages',
   },
+  Coins: {
+    kr_name: '코인',
+    github_link: 'https://github.com/miraejang/coins',
+    page_link: 'https://miraejang.github.io/coins/',
+    thumnail: 'coins.jpg',
+    front_end: ['GraphQL', 'React'],
+    features: ['Ticker와 Coin의 순위 100보기', 'Ticker와 Coin의 상세 정보 보기'],
+    deployment: 'GitHub Pages',
+  },
   Notion: {
     kr_name: '노션',
     github_link: 'https://github.com/miraejang/typescript-notion',
