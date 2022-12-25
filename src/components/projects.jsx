@@ -18,16 +18,16 @@ const PROJECTS_DATA = {
       '비디오 검색',
       '사이드 메뉴바를 축소형으로 변경',
     ],
-    deployment: 'GitHub Pages',
+    deployment: ['GitHub Pages'],
   },
   Coins: {
     kr_name: '코인',
     github_link: 'https://github.com/miraejang/coins',
     page_link: 'https://miraejang.github.io/coins/',
     thumnail: 'coins.jpg',
-    front_end: ['GraphQL', 'React'],
-    features: ['Ticker와 Coin의 순위 100보기', 'Ticker와 Coin의 상세 정보 보기'],
-    deployment: 'GitHub Pages',
+    front_end: ['GraphQL', 'Apollo Server', 'React', 'React Router 6', 'styled-components', 'reachart'],
+    features: ['Ticker와 Coin의 순위 확인', 'Coin의 상세 정보 보기', '3주간 종가를 그래프로 확인', '다크 / 라이트 모드 전환'],
+    deployment: [['GitHub Pages'], 'Heroku(server)'],
   },
   Notion: {
     kr_name: '노션',
@@ -36,7 +36,7 @@ const PROJECTS_DATA = {
     thumnail: 'notion.jpg',
     front_end: ['TypeScript'],
     features: ['메모 추가, 삭제', '이미지, 동영상, 텍스트, 체크박스 4가지 종류로 메모 생성', '드래그앤드롭으로 리스트 요소 순서 변경'],
-    deployment: 'GitHub Pages',
+    deployment: ['GitHub Pages'],
   },
   Movie_Web_Service: {
     kr_name: '영화 소개 앱',
@@ -45,7 +45,7 @@ const PROJECTS_DATA = {
     thumnail: 'movie-app.jpg',
     front_end: ['React', 'React Router', 'Axios', 'Styled Components'],
     features: ['상단 내비게이션을 통한 페이지 이동', '홈에서 보고 싶은 리스트를 선택하여 확인', '영상 검색'],
-    deployment: 'GitHub Pages',
+    deployment: ['GitHub Pages'],
   },
   Twitter: {
     kr_name: '트위터',
@@ -55,7 +55,7 @@ const PROJECTS_DATA = {
     front_end: ['Vue3', 'Vuex', 'Vue Router', 'Moment.js', 'Tailwind CSS'],
     back_end: ['Firebase (Authentication)', 'Firebase (Realtime Database)'],
     features: ['로그인 / 로그아웃', '트윗 생성, 삭제, 수정', '내 프로필 수정', '다른 유저의 프로필 확인', '다른 유저와 쪽지 주고받기'],
-    deployment: 'GitHub Pages',
+    deployment: ['GitHub Pages'],
   },
   Mini_Games: {
     kr_name: '미니 게임 앱',
@@ -64,7 +64,7 @@ const PROJECTS_DATA = {
     thumnail: 'vue-game.jpg',
     front_end: ['Vue', 'Vuex', 'Vue Router'],
     features: ['가볍게 즐길 수 있는 8가지 게임', '끝말잇기, 구구단, 숫자 야구, 반응 속도 체크, 가위바위보, 로또, 틱택토, 지뢰 찾기'],
-    deployment: 'GitHub Pages',
+    deployment: ['GitHub Pages'],
   },
 };
 
@@ -141,9 +141,13 @@ const Projects = () => {
                   {deployment && (
                     <li className="deployment no_print">
                       <h5>Deployment</h5>
-                      <div className="labels">
-                        <p className="label">{deployment}</p>
-                      </div>
+                      <ul className="labels">
+                        {deployment.map(tech => (
+                          <li className="label" key={tech}>
+                            {tech}
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                   )}
                   {etc && (
