@@ -6,7 +6,7 @@ const PROJECTS_DATA = {
     github_link: 'https://github.com/miraejang/react-youtube',
     page_link: 'https://miraejang.github.io/react-youtube/',
     thumnail: 'youtube.jpg',
-    front_end: ['React', 'React Router', 'Axios', 'React Redux', 'Web Storage API(localStorage)', 'PostCss'],
+    front_end: ['React', 'React Router', 'Axios', 'Redux', 'Web Storage API(localStorage)', 'PostCss'],
     back_end: ['Firebase (Authentication)', 'Firebase (Realtime Database)'],
     etc: ['Postman'],
     features: [
@@ -35,7 +35,7 @@ const PROJECTS_DATA = {
     page_link: 'https://miraejang.github.io/typescript-notion/',
     thumnail: 'notion.jpg',
     front_end: ['TypeScript'],
-    features: ['메모 추가, 삭제', '이미지, 동영상, 텍스트, 체크박스 4가지 종류로 메모 생성', '드래그앤드롭으로 리스트 요소 순서 변경'],
+    features: ['메모 추가, 삭제', '이미지, 동영상, 텍스트, 체크박스 4가지 종류로 메모 생성', '드래그앤드롭으로 리스트 아이템 순서 변경'],
     deployment: ['GitHub Pages'],
   },
   Movie_Web_Service: {
