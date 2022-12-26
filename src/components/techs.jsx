@@ -6,17 +6,14 @@ const TECHS_DATA = {
       name: 'React',
       icon: 'react',
       desc: `React를 사용한 웹앱을 제작할 수 있습니다.`,
-      sub_techs: {
-        'React Router': 'reactrouter',
-        'Axios': 'axios',
-      },
+      sub_techs: ['react_query', 'next_js', 'recoil', 'react_router', 'axios'],
     },
     javascript: {
       name: 'JavaScript',
       icon: 'javascript',
       icon_size: 'small',
       desc: 'ES6+ 구문을 사용합니다. Prototype, Hoisting, Scope, Closure를 이해하고 있으며 브라우저 API를 사용할 수 있습니다.',
-      sub_techs: null,
+      sub_techs: ['jquery'],
     },
     typescript: {
       name: 'TypeScript',
@@ -38,21 +35,14 @@ const TECHS_DATA = {
       icon: 'css3',
       icon_size: 'small',
       desc: '레이아웃을 구성하고 스타일링할 수 있습니다. \n다수의 반응형 웹사이트를 제작해 본 경험이 있습니다.',
-      sub_techs: {
-        'Sass': 'sass',
-        'PostCSS': 'postcss',
-        'Tailwind CSS': 'tailwindcss',
-        'styled-components': 'styledcomponents',
-      },
+      sub_techs: ['sass', 'postcss', 'tailwindcss', 'styled_components'],
     },
     html: {
       name: 'HTML',
       icon: 'html5',
       icon_size: 'small',
       desc: '시맨틱 마크업, 웹 접근성, 크로스 브라우징, SEO를 고려하여 작성할 수 있습니다. \n다수의 웹 사이트를 제작해 본 경험이 있습니다.',
-      sub_techs: {
-        Bootstrap: 'bootstrap',
-      },
+      sub_techs: ['bootstrap'],
     },
   },
   Back_end: {
@@ -72,10 +62,7 @@ const OTHERS_TECHS_DATA = {
       icon: 'git',
       icon_size: 'small',
       desc: 'Git을 이용하여 버전 관리를 할 수 있고, 협업의 경험이 있습니다.',
-      sub_techs: {
-        GitHub: 'github',
-        GitLab: 'gitlab',
-      },
+      sub_techs: ['github', 'gitlab'],
     },
     slack: {
       name: 'Slack',
@@ -126,16 +113,13 @@ const Techs = () => {
                         <div className="card_sub">
                           <div className="related_techs">
                             <h6>관련된 Tech</h6>
-                            <div className="tech_icons no_print">
-                              {Object.keys(sub_techs).map(sub_tech => (
-                                <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt={sub_tech} className={`icon ${icon_size && icon_size}`} key={sub_tech} />
+                            <ul className="tech_icons no_print">
+                              {sub_techs.map(sub_tech => (
+                                <li key={sub_tech}>
+                                  <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_tech}.png`} alt={sub_tech} className="icon" />
+                                </li>
                               ))}
-                            </div>
-                            <p className="names">
-                              {Object.keys(sub_techs).map(sub_tech => (
-                                <span key={sub_tech}>{sub_tech}</span>
-                              ))}
-                            </p>
+                            </ul>
                           </div>
                         </div>
                       )}
@@ -177,16 +161,13 @@ const Techs = () => {
                           <div className="card_sub">
                             <div className="related_techs">
                               <h6>관련된 Tech</h6>
-                              <div className="tech_icons no_print">
-                                {Object.keys(sub_techs).map(sub_tech => (
-                                  <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_techs[sub_tech]}.svg`} alt={sub_tech} className={`icon ${icon_size && icon_size}`} key={sub_tech} />
+                              <ul className="tech_icons no_print">
+                                {sub_techs.map(sub_tech => (
+                                  <li key={sub_tech}>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_tech}.png`} alt={sub_tech} className="icon" />
+                                  </li>
                                 ))}
-                              </div>
-                              <p className="names">
-                                {Object.keys(sub_techs).map(sub_tech => (
-                                  <span key={sub_tech}>{sub_tech}</span>
-                                ))}
-                              </p>
+                              </ul>
                             </div>
                           </div>
                         )}

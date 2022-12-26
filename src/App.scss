@@ -252,12 +252,18 @@ $icon-size-small: $icon-size-defualt * 0.85;
   }
 
   .tech_icons {
-    .icon {
-      width: 2.2rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .icon + .icon {
-      margin-left: 0.5rem;
+    li + li {
+      margin-top: 0.5rem;
+    }
+    .icon {
+      display: block;
+      width: auto;
+      height: 2rem;
     }
 
     .githubPages {
@@ -611,27 +617,6 @@ $icon-size-small: $icon-size-defualt * 0.85;
         padding: 0 1rem;
       }
     }
-  }
-
-  // A4에 맞춘 수정
-  .tech_skills {
-    page-break-after: always;
-  }
-  .projects .section_title {
-    margin-top: 0;
-  }
-  .notion .poroject_info .info .page_links + li {
-    page-break-after: always;
-  }
-  .twitter {
-    page-break-after: always;
-    margin-bottom: 0;
-  }
-  .mini_games {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: 0;
-    margin-top: 10px;
   }
 }
 
