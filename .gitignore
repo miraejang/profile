@@ -23,5 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 
-#vscode
+# vscode
 .vscode
+
+# print css
+a4_print.css

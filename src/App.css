@@ -331,6 +331,10 @@
   border-top: 1px solid #e0e0e0;
 }
 
+.tech_skills .card_sub .related_techs h6 {
+  white-space: nowrap;
+}
+
 .tech_skills .card_sub .related_techs .tech_icons {
   margin-top: 1rem;
 }
@@ -556,9 +560,6 @@
   .tech_skills .category {
     margin-bottom: 1.5rem;
   }
-  .tech_skills .other_techs {
-    margin-bottom: 0;
-  }
   .tech_skills .techs {
     display: block;
     margin-top: 0.8rem;
@@ -610,6 +611,26 @@
     padding: 1rem;
     border: 1px solid #e0e0e0;
     border-radius: 0.3rem;
+  }
+  .tech_skills .card_sub .related_techs .tech_icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  .tech_skills .card_sub .related_techs .tech_icons li + li {
+    margin-top: 0;
+    margin-left: 0.5rem;
   }
   .tech_skills .card_sub .related_techs .names {
     margin: 0 0 0 1rem;

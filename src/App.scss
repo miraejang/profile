@@ -306,6 +306,10 @@ $icon-size-small: $icon-size-defualt * 0.85;
       padding: 1rem;
       border-top: 1px solid $cloudy;
 
+      h6 {
+        white-space: nowrap;
+      }
+
       .tech_icons {
         margin-top: 1rem;
       }
@@ -528,10 +532,6 @@ $icon-size-small: $icon-size-defualt * 0.85;
       margin-bottom: 1.5rem;
     }
 
-    .other_techs {
-      margin-bottom: 0;
-    }
-
     .techs {
       display: block;
       margin-top: 0.8rem;
@@ -577,6 +577,20 @@ $icon-size-small: $icon-size-defualt * 0.85;
         padding: 1rem;
         border: 1px solid $cloudy;
         border-radius: 0.3rem;
+
+        .tech_icons {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 0;
+          margin-left: 1rem;
+
+          li + li {
+            margin-top: 0;
+            margin-left: 0.5rem;
+          }
+        }
 
         .names {
           margin: 0 0 0 1rem;

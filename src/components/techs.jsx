@@ -53,10 +53,7 @@ const TECHS_DATA = {
       sub_techs: null,
     },
   },
-};
-
-const OTHERS_TECHS_DATA = {
-  Communication: {
+  Others: {
     git: {
       name: 'Git',
       icon: 'git',
@@ -113,7 +110,7 @@ const Techs = () => {
                         <div className="card_sub">
                           <div className="related_techs">
                             <h6>관련된 Tech</h6>
-                            <ul className="tech_icons no_print">
+                            <ul className="tech_icons">
                               {sub_techs.map(sub_tech => (
                                 <li key={sub_tech}>
                                   <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_tech}.png`} alt={sub_tech} className="icon" />
@@ -131,55 +128,6 @@ const Techs = () => {
           </div>
         );
       })}
-      <div className="category other_techs">
-        <h3>And other things</h3>
-        {Object.keys(OTHERS_TECHS_DATA).map(category => {
-          const sub_category = OTHERS_TECHS_DATA[category];
-
-          return (
-            <div className={`sub_category ${category.toLowerCase()}`} key={category}>
-              <h4>{category}</h4>
-              <ul className="techs">
-                {Object.keys(sub_category).map(techs => {
-                  const { name, icon, icon_size, desc, sub_techs } = sub_category[techs];
-
-                  return (
-                    <li className={techs} key={techs}>
-                      <div className="card">
-                        <div className="card_main">
-                          <div className="tech_title">
-                            <img src={`${process.env.PUBLIC_URL}/assets/icons/${icon}.svg`} alt={techs} className={`icon ${icon_size && icon_size}`} />
-                            <h4>{name}</h4>
-                          </div>
-                          <div className="tech_desc">
-                            {desc.split('\n').map(str => (
-                              <p key={str}>{str}</p>
-                            ))}
-                          </div>
-                        </div>
-                        {sub_techs && (
-                          <div className="card_sub">
-                            <div className="related_techs">
-                              <h6>관련된 Tech</h6>
-                              <ul className="tech_icons no_print">
-                                {sub_techs.map(sub_tech => (
-                                  <li key={sub_tech}>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/icons/${sub_tech}.png`} alt={sub_tech} className="icon" />
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          );
-        })}
-      </div>
     </section>
   );
 };
